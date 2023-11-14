@@ -1,22 +1,23 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from 'react'
+
+import styled from 'styled-components'
 
 export const Slider = () => {
-    return (
-        <StyledSlider>
-            <Wrapper>
-                <Slide>
-                    <Text></Text>
-                </Slide>
-            </Wrapper>
-            <Pagination>
-                <span></span>
-                <span></span>
-                <span></span>
-            </Pagination>
-        </StyledSlider>
-    );
-};
+  return (
+    <StyledSlider>
+      <Wrapper>
+        <Slide>
+          <Text></Text>
+        </Slide>
+      </Wrapper>
+      <Pagination>
+        <span></span>
+        <span></span>
+        <span></span>
+      </Pagination>
+    </StyledSlider>
+  )
+}
 
 const StyledSlider = styled.div`
   border: 1px solid red;
@@ -24,7 +25,6 @@ const StyledSlider = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  
 `
 
 const Slide = styled.div`
@@ -32,9 +32,7 @@ const Slide = styled.div`
   text-align: center;
 `
 
-const Text = styled.p`
-
-`
+const Text = styled.p``
 const Wrapper = styled.div`
   display: flex;
 `
