@@ -8,30 +8,30 @@ type MenuProps = {
 export const Menu: FC<MenuProps> = ({ menuItems }) => {
   return (
     <StyledMenu>
-      <ul>
+      <Ul>
         {menuItems.map((el, i) => (
-          <li key={i}>
-            <a href={''}>{el}</a>
-          </li>
+          <>
+            <List key={i}>
+              <Link href={''}>{el}</Link>
+            </List>
+          </>
         ))}
-      </ul>
+      </Ul>
     </StyledMenu>
   )
 }
 
-const StyledMenu = styled.nav`
-  ul {
-    display: flex;
-    gap: 40px;
-
-    li {
-      a {
-        text-decoration: none;
-
-        &:visited {
-          color: inherit;
-        }
-      }
-    }
+const StyledMenu = styled.nav` ul {
+  display: flex;
+  gap: 40px;
+`
+const Ul = styled.ul``
+const List = styled.li``
+const Link = styled.a`
+  font-size: 18px;
+  font-weight: normal;
+  text-decoration: none;
+  &:visited {
+    color: inherit;
   }
 `

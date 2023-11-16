@@ -1,3 +1,4 @@
+import { theme } from '@/styles/themes'
 import { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyled = createGlobalStyle`
@@ -15,11 +16,14 @@ export const GlobalStyled = createGlobalStyle`
     sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-
+    line-height: 1.2;
+    background-color: ${theme.colors.bGround.dark};
+    color: ${theme.colors.text.dark};
   }
 
   a {
     text-decoration: none;
+    color: ${theme.colors.text.dark};
   }
 
   li {

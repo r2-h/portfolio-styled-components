@@ -1,12 +1,11 @@
-import * as React from 'react'
 import { SVGProps, memo } from 'react'
 
 const SvgComponent = (props: SVGProps<SVGSVGElement>) => (
   <svg
     fill={'none'}
-    height={30}
+    height={80}
     viewBox={'0 0 80 80'}
-    width={30}
+    width={80}
     xmlns={'http://www.w3.org/2000/svg'}
     {...props}
   >

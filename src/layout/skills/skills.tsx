@@ -1,27 +1,47 @@
-import { FlexWrapper, SectionTitle } from '@/components'
+import { CSSIcon } from '@/assets/css'
+import { HTMLIcon } from '@/assets/html'
+import { NextIcon } from '@/assets/next'
+import { ReactIcon } from '@/assets/react'
+import { ReactHookFormIcon } from '@/assets/react-hook-form'
+import { ReduxIcon } from '@/assets/redux'
+import { SCSSIcon } from '@/assets/scss'
+import { StorybookIcon } from '@/assets/storybook'
+import { StyledComponentsIcon } from '@/assets/styled-components'
+import { TSIcon } from '@/assets/ts'
+import { Container, FlexWrapper, SectionTitle } from '@/components'
+import { SecondaryTitle } from '@/components/secondary-title'
+import { Skill } from '@/layout/skills/skill'
 import styled from 'styled-components'
-
-import { Skill } from './skill/skill'
 
 export const Skills = () => {
   return (
     <StyledSkillsSection>
-      <SectionTitle>My Tech Stack</SectionTitle>
-      <FlexWrapper justify={'space-around'} wrap={'wrap'}>
-        <Skill height={'75px'} iconId={'ts'} title={'ts'} viewBox={'0 0 25 25'} width={'75px'} />
-        <Skill iconId={'react'} title={'react'} />
-        <Skill iconId={'css'} title={'css'} />
-        <Skill iconId={'html'} title={'html'} />
-        <Skill iconId={'redux'} title={'redux'} />
-        <Skill iconId={'scss'} title={'scss'} />
-        <Skill iconId={'storyBook'} title={'storyBook'} viewBox={'-31.5 0 319 319'} />
-        <Skill iconId={'styledComponents'} title={'styledComponents'} viewBox={'0 0 38 38'} />
-      </FlexWrapper>
+      <Container>
+        <SectionTitle>My Tech Stack</SectionTitle>
+        <SecondaryTitle>Technologies I’ve been working with recently</SecondaryTitle>
+
+        <FlexWrapper
+          gap={'30px'}
+          justify={'space-between'}
+          style={{ columnGap: 140, display: 'flex' }}
+          wrap={'wrap'}
+        >
+          <Skill icon={<TSIcon />} marginTop={'10px'} title={'Type Script'} />
+          <Skill icon={<ReactIcon />} title={'React'} />
+          <Skill icon={<HTMLIcon />} title={'HTML'} />
+          <Skill icon={<CSSIcon />} title={'CSS'} />
+          <Skill icon={<ReduxIcon />} title={'Redux'} />
+          <Skill icon={<SCSSIcon />} title={'SCSS'} />
+          <Skill icon={<StorybookIcon />} marginTop={'-10px'} title={'Storybook'} />
+          <Skill icon={<StyledComponentsIcon />} marginTop={'11px'} title={'Styled Components'} />
+          <Skill icon={<NextIcon />} title={'Next'} />
+          <Skill icon={<ReactHookFormIcon />} title={'React Hook Form'} />
+        </FlexWrapper>
+      </Container>
     </StyledSkillsSection>
   )
 }
 
 const StyledSkillsSection = styled.section`
-  background-color: violet;
-  min-height: 100vh;
+  margin-bottom: 210px;
 `
