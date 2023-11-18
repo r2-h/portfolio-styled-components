@@ -17,10 +17,10 @@ export const Works = () => {
           <Work
             codeLink={'https://github.com/r2adler/it-inc-cards'}
             demoLink={'https://it-inc-cards.vercel.app/'}
-            description={`Приложение, которое позволяет создавать и изучать карточки с вопросами и ответами. Это удобный инструмент для изучения любых тем. Приложение также позволяет делиться своими наборами карточек с другими пользователями.`}
+            description={`Приложение, которое позволяет создавать и изучать карточки с вопросами и ответами. Также позволяет делиться своими наборами карточек с другими пользователями.`}
             img={flashcardsImg}
             imgTitle={'Flashcards image'}
-            techStack={'TypeScript, React, RTK Query, Storybook,  React Hook Form'}
+            techStack={'TypeScript, React, Radix, RTK Query, Storybook,  React Hook Form'}
             title={'Flashcards'}
           />
           <Work

@@ -1,29 +1,35 @@
-import { FlexWrapper, Logo, SectionTitle } from '@/components'
+import { Container, Menu } from '@/components'
+import { theme } from '@/styles'
 import styled from 'styled-components'
 
 export const Footer = () => {
   return (
     <StyledFooter>
-      <SectionTitle>For any questions please mail me:</SectionTitle>
-      <Text>r2mail1122@gmail.com</Text>
-      <FlexWrapper justify={'center'}>
-        <Logo />
-        <Logo />
-        <Logo />
-      </FlexWrapper>
-      <Copyright>© 2023 Artur Hareksian, All Rights Reserved.</Copyright>
+      <Container>
+        {/*<Board />*/}
+        <Wrapper>
+          <Menu menuItems={['Home', 'Tech stack', 'Projects', 'Contact']} />
+          <Copyright>© 2023 Artur Hareksian, All Rights Reserved.</Copyright>
+        </Wrapper>
+      </Container>
     </StyledFooter>
   )
 }
 
 const StyledFooter = styled.div`
-  min-height: 200px;
+  margin-top: 100px;
 `
 
-const Text = styled.p`
-  text-align: center;
-`
 const Copyright = styled.span`
   display: block;
   text-align: center;
+`
+
+const Wrapper = styled.div`
+  border-top: 1px solid ${theme.colors.project.dark};
+  display: flex;
+  justify-content: space-between;
+  height: 130px;
+  color: ${theme.colors.textSecondary.dark};
+  align-items: center;
 `

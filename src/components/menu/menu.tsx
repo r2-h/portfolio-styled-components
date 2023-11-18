@@ -1,5 +1,6 @@
 import { FC } from 'react'
 
+import { theme } from '@/styles'
 import styled from 'styled-components'
 
 type MenuProps = {
@@ -21,16 +22,21 @@ export const Menu: FC<MenuProps> = ({ menuItems }) => {
   )
 }
 
-const StyledMenu = styled.nav` ul {
+const StyledMenu = styled.nav`
+  @media ${theme.media.mobile} {
+    display: none;
+  }
+`
+const Ul = styled.ul`
   display: flex;
   gap: 40px;
 `
-const Ul = styled.ul``
 const List = styled.li``
 const Link = styled.a`
   font-size: 18px;
   font-weight: normal;
   text-decoration: none;
+
   &:visited {
     color: inherit;
   }

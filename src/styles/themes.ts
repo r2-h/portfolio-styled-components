@@ -4,6 +4,7 @@ export const theme = {
       dark: '#191919',
       light: '#f5f5f5',
     },
+
     project: {
       dark: `#363636`,
       light: `#FFF`,
@@ -16,5 +17,8 @@ export const theme = {
       dark: `#A7A7A7`,
       light: `#666666`,
     },
+  },
+  media: {
+    mobile: 'screen and (max-width: 576px)',
   },
 }

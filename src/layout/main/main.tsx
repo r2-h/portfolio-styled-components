@@ -1,5 +1,6 @@
 import { WavingHand } from '@/assets/waving-hand'
 import { Container, FlexWrapper } from '@/components'
+import { StyledText } from '@/components/styled-text'
 import { theme } from '@/styles'
 // eslint-disable-next-line import/no-named-as-default
 import styled from 'styled-components'
@@ -16,7 +17,7 @@ export const Main = () => {
               Hi <WavingHand />,
             </FlexWrapper>
             <Name>My name is</Name>
-            <StyledName>Artur Hareksian</StyledName>
+            <StyledText>Artur Hareksian</StyledText>
             <Developer>A web developer</Developer>
           </div>
           <PhotoWrapper>
@@ -40,7 +41,7 @@ const StyledMain = styled.div`
 `
 
 const PhotoWrapper = styled.div`
-  width: 350px;
+  min-width: 350px;
   height: 350px;
   border-radius: 50%;
   background: linear-gradient(45deg, #13b0f5, #e70faa);
@@ -56,13 +57,6 @@ const Photo = styled.div`
   border-radius: 50%;
 `
 
-const StyledName = styled.h2`
-  background: linear-gradient(45deg, #13b0f5, #e70faa);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  font-size: 58px;
-`
 const Name = styled.h2`
   font-size: 58px;
 `

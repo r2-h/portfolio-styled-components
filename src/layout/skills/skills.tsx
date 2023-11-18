@@ -28,14 +28,14 @@ export const Skills = () => {
         >
           <Skill icon={<TSIcon />} marginTop={'10px'} title={'Type Script'} />
           <Skill icon={<ReactIcon />} title={'React'} />
-          <Skill icon={<HTMLIcon />} title={'HTML'} />
-          <Skill icon={<CSSIcon />} title={'CSS'} />
+          <Skill icon={<HTMLIcon />} marginTop={'7px'} title={'HTML'} />
+          <Skill icon={<CSSIcon />} marginTop={'7px'} title={'CSS'} />
           <Skill icon={<ReduxIcon />} title={'Redux'} />
           <Skill icon={<SCSSIcon />} title={'SCSS'} />
           <Skill icon={<StorybookIcon />} marginTop={'-10px'} title={'Storybook'} />
           <Skill icon={<StyledComponentsIcon />} marginTop={'11px'} title={'Styled Components'} />
-          <Skill icon={<NextIcon />} title={'Next'} />
-          <Skill icon={<ReactHookFormIcon />} title={'React Hook Form'} />
+          <Skill icon={<NextIcon />} marginTop={'-6px'} title={'Next'} />
+          <Skill icon={<ReactHookFormIcon />} marginTop={'8px'} title={'React Hook Form'} />
         </FlexWrapper>
       </Container>
     </StyledSkillsSection>
