@@ -1,5 +1,6 @@
 import { FC } from 'react'
 
+import { theme } from '@/styles'
 import styled from 'styled-components'
 
 type SplitedTextProps = {
@@ -18,12 +19,12 @@ export const SplitedText: FC<SplitedTextProps> = ({ children }) => (
 )
 const Half = styled.span`
   overflow-y: hidden;
-  height: 50%;
+  height: 48%;
   position: absolute;
-  top: 0;
+  top: 2px;
   left: 0;
   display: inline-block;
-  color: snow;
+  color: #a375ff;
 
   & + & {
     top: 50%;
@@ -37,13 +38,15 @@ const Half = styled.span`
 const Relative = styled.span`
   position: relative;
   color: transparent;
+  font-size: 31px;
 
   &::before {
     content: '';
     display: inline-block;
     height: 1px;
-    background-color: #fff;
+    background-color: #a375ff;
     position: absolute;
+
     top: 50%;
     left: -10px;
     right: -10px;
@@ -58,7 +61,7 @@ const Relative = styled.span`
 
     ${Half} {
       transform: skewX(12deg) translateX(0.1em);
-      color: green;
+      color: ${theme.colors.text.dark};
 
       & + ${Half} {
         transform: skewX(12deg) translateX(-0.1rem);

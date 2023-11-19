@@ -39,7 +39,7 @@ const IconWrapper = styled.button`
 const MyThemeIcon = styled(ThemeIcon)`
   width: 35px;
   height: 35px;
-  color: #a2d9ff;
+  color: ${theme.colors.text.dark};
   //  #7e75ff
 `
 const Wrapper = styled.div`

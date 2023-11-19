@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { FC, useState } from 'react'
 
 import { SplitedText } from '@/components'
 import { theme } from '@/styles'
@@ -8,13 +8,15 @@ type MobileMenuProps = {
   menuItems: string[]
 }
 export const MobileMenu: FC<MobileMenuProps> = ({ menuItems }) => {
+  const [isOpen, setIsOpen] = useState(false)
+
   return (
     <StyledMobileMenu>
-      <BurgerButton isOpen={false}>
+      <BurgerButton isOpen={isOpen} onClick={() => setIsOpen(prev => !prev)}>
         <span></span>
       </BurgerButton>
 
-      <PopUp isOpen={false}>
+      <PopUp isOpen={isOpen}>
         <ul>
           {menuItems.map((el, i) => (
             <>
@@ -41,12 +43,14 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
   align-items: center;
   justify-content: center;
   display: flex;
+  cursor: pointer;
 
   span {
     display: block;
     width: 36px;
     height: 2px;
     background-color: ${theme.colors.text.dark};
+    cursor: pointer;
 
     ${props =>
       props.isOpen &&
@@ -105,7 +109,7 @@ const PopUp = styled.nav<{ isOpen: boolean }>`
     `}
   ul {
     display: flex;
-    gap: 30px;
+    gap: 35px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -113,8 +117,6 @@ const PopUp = styled.nav<{ isOpen: boolean }>`
 `
 const List = styled.li``
 const Link = styled.a`
-  font-size: 18px;
-  font-weight: normal;
   text-decoration: none;
 
   &:visited {

@@ -1,4 +1,4 @@
-import { Container, FlexWrapper, SectionTitle } from '@/components'
+import { Container, SectionTitle } from '@/components'
 import { SecondaryTitle } from '@/components/secondary-title'
 import { Work } from '@/layout/works/work/work'
 import styled from 'styled-components'
@@ -13,7 +13,7 @@ export const Works = () => {
       <Container>
         <SectionTitle>Projects</SectionTitle>
         <SecondaryTitle>Things I’ve built so far</SecondaryTitle>
-        <FlexWrapper align={'center'} justify={'space-between'}>
+        <Wrapper>
           <Work
             codeLink={'https://github.com/r2adler/it-inc-cards'}
             demoLink={'https://it-inc-cards.vercel.app/'}
@@ -41,10 +41,21 @@ export const Works = () => {
             techStack={'TypeScript, React,  RTK, Storybook, Formik'}
             title={'Social network'}
           />
-        </FlexWrapper>
+        </Wrapper>
       </Container>
     </StyledWorks>
   )
 }
 
 const StyledWorks = styled.div``
+const Wrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+
+  @media screen and (max-width: 1429px) {
+    justify-content: center;
+  }
+`

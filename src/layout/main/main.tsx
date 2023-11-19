@@ -2,6 +2,7 @@ import { WavingHand } from '@/assets/waving-hand'
 import { Container, FlexWrapper } from '@/components'
 import { StyledText } from '@/components/styled-text'
 import { theme } from '@/styles'
+import { Font } from '@/styles/common'
 // eslint-disable-next-line import/no-named-as-default
 import styled from 'styled-components'
 
@@ -11,19 +12,19 @@ export const Main = () => {
   return (
     <StyledMain>
       <Container>
-        <FlexWrapper justify={'space-between'}>
+        <Wrapper>
           <div>
-            <FlexWrapper align={'end'} justify={'none'}>
-              Hi <WavingHand />,
-            </FlexWrapper>
+            <Wrapper2>
+              Hi <WavingHandIcon />,
+            </Wrapper2>
             <Name>My name is</Name>
-            <StyledText>Artur Hareksian</StyledText>
+            <StyledName>Artur Hareksian</StyledName>
             <Developer>A web developer</Developer>
           </div>
           <PhotoWrapper>
             <Photo />
           </PhotoWrapper>
-        </FlexWrapper>
+        </Wrapper>
       </Container>
     </StyledMain>
   )
@@ -31,7 +32,6 @@ export const Main = () => {
 
 const StyledMain = styled.div`
   min-height: 100vh;
-
   color: ${theme.colors.text.dark};
   display: flex;
   line-height: 70px;
@@ -58,8 +58,36 @@ const Photo = styled.div`
 `
 
 const Name = styled.h2`
-  font-size: 58px;
+  ${Font({ Fmax: 58, Fmin: 35 })}
 `
 const Developer = styled.h1`
   font-size: 58px;
+  white-space: nowrap;
+  ${Font({ Fmax: 58, Fmin: 35 })}
+`
+const Wrapper = styled(FlexWrapper)`
+  gap: 50px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  @media screen and (max-width: 1011px) {
+    justify-content: center;
+  }
+`
+const Wrapper2 = styled.div`
+  display: flex;
+  align-items: flex-end;
+  ${Font({ Fmax: 58, Fmin: 35 })};
+  @media ${theme.media.mobile} {
+    align-items: flex-start;
+  }
+`
+const StyledName = styled(StyledText)`
+  white-space: nowrap;
+  ${Font({ Fmax: 58, Fmin: 35 })}
+`
+const WavingHandIcon = styled(WavingHand)`
+  @media ${theme.media.mobile} {
+    width: 60px;
+    height: 60px;
+  }
 `

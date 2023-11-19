@@ -8,7 +8,7 @@ import { SCSSIcon } from '@/assets/scss'
 import { StorybookIcon } from '@/assets/storybook'
 import { StyledComponentsIcon } from '@/assets/styled-components'
 import { TSIcon } from '@/assets/ts'
-import { Container, FlexWrapper, SectionTitle } from '@/components'
+import { Container, SectionTitle } from '@/components'
 import { SecondaryTitle } from '@/components/secondary-title'
 import { Skill } from '@/layout/skills/skill'
 import styled from 'styled-components'
@@ -20,12 +20,7 @@ export const Skills = () => {
         <SectionTitle>My Tech Stack</SectionTitle>
         <SecondaryTitle>Technologies I’ve been working with recently</SecondaryTitle>
 
-        <FlexWrapper
-          gap={'30px'}
-          justify={'space-between'}
-          style={{ columnGap: 140, display: 'flex' }}
-          wrap={'wrap'}
-        >
+        <Wrapper>
           <Skill icon={<TSIcon />} marginTop={'10px'} title={'Type Script'} />
           <Skill icon={<ReactIcon />} title={'React'} />
           <Skill icon={<HTMLIcon />} marginTop={'7px'} title={'HTML'} />
@@ -36,7 +31,7 @@ export const Skills = () => {
           <Skill icon={<StyledComponentsIcon />} marginTop={'11px'} title={'Styled Components'} />
           <Skill icon={<NextIcon />} marginTop={'-6px'} title={'Next'} />
           <Skill icon={<ReactHookFormIcon />} marginTop={'8px'} title={'React Hook Form'} />
-        </FlexWrapper>
+        </Wrapper>
       </Container>
     </StyledSkillsSection>
   )
@@ -44,4 +39,19 @@ export const Skills = () => {
 
 const StyledSkillsSection = styled.section`
   margin-bottom: 210px;
+`
+const Wrapper = styled.div`
+  display: flex;
+  row-gap: 50px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  column-gap: 140px;
+
+  @media screen and (max-width: 629px) {
+    justify-content: space-around;
+    column-gap: 100px;
+  }
+  @media screen and (max-width: 1143px) {
+    column-gap: 90px;
+  }
 `
