@@ -39,8 +39,8 @@ const StyledContacts = styled.div`
 const StyledEMail = styled(StyledText)`
   display: flex;
   justify-content: center;
-
   font-size: 32px;
+
   cursor: pointer;
 
   &:hover {
@@ -64,6 +64,7 @@ const ContactTitle = styled.a`
   cursor: pointer;
   color: ${theme.colors.textSecondary.dark};
   font-size: 32px;
+
   @media screen and (max-width: 860px) {
     margin-left: 0;
   }

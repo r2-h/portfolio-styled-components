@@ -32,12 +32,7 @@ export const MobileMenu: FC<MobileMenuProps> = ({ menuItems }) => {
     </StyledMobileMenu>
   )
 }
-const StyledMobileMenu = styled.div`
-  display: none;
-  @media ${theme.media.mobile} {
-    display: block;
-  }
-`
+const StyledMobileMenu = styled.div``
 const BurgerButton = styled.button<{ isOpen: boolean }>`
   z-index: 99999;
   align-items: center;

@@ -1,13 +1,26 @@
+import { useEffect, useState } from 'react'
+
 import { Container, Menu } from '@/components'
 import { theme } from '@/styles'
 import styled from 'styled-components'
 
 export const Footer = () => {
+  const [width, setWidth] = useState(window.innerWidth)
+  const breakpoint = 564
+
+  useEffect(() => {
+    const handleWindowResize = () => setWidth(window.innerWidth)
+
+    window.addEventListener('resize', handleWindowResize)
+
+    return () => window.removeEventListener('resize', handleWindowResize)
+  }, [])
+
   return (
     <StyledFooter>
       <Container>
         <Wrapper>
-          <Menu menuItems={['Home', 'Tech stack', 'Projects', 'Contact']} />
+          {width > breakpoint && <Menu menuItems={['Home', 'Tech stack', 'Projects', 'Contact']} />}
           <Copyright>© 2023 Artur Hareksian, All Rights Reserved.</Copyright>
         </Wrapper>
       </Container>

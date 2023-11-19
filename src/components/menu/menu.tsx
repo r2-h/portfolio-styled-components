@@ -1,6 +1,5 @@
 import { FC } from 'react'
 
-import { theme } from '@/styles'
 import styled from 'styled-components'
 
 type MenuProps = {
@@ -22,11 +21,7 @@ export const Menu: FC<MenuProps> = ({ menuItems }) => {
   )
 }
 
-const StyledMenu = styled.nav`
-  @media ${theme.media.mobile} {
-    display: none;
-  }
-`
+const StyledMenu = styled.nav``
 const Ul = styled.ul`
   display: flex;
   gap: 40px;

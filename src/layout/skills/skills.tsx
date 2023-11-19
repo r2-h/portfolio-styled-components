@@ -19,7 +19,6 @@ export const Skills = () => {
       <Container>
         <SectionTitle>My Tech Stack</SectionTitle>
         <SecondaryTitle>Technologies I’ve been working with recently</SecondaryTitle>
-
         <Wrapper>
           <Skill icon={<TSIcon />} marginTop={'10px'} title={'Type Script'} />
           <Skill icon={<ReactIcon />} title={'React'} />
@@ -47,11 +46,12 @@ const Wrapper = styled.div`
   flex-wrap: wrap;
   column-gap: 140px;
 
-  @media screen and (max-width: 629px) {
-    justify-content: space-around;
-    column-gap: 100px;
-  }
   @media screen and (max-width: 1143px) {
     column-gap: 90px;
+  }
+
+  @media screen and (max-width: 629px) {
+    justify-content: space-around;
+    column-gap: 50px;
   }
 `

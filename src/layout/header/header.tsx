@@ -1,3 +1,5 @@
+import { useEffect, useState } from 'react'
+
 import { ThemeIcon } from '@/assets/them-icon'
 import { Container, Menu } from '@/components'
 import { MobileMenu } from '@/layout/header/mobile-menu'
@@ -5,6 +7,16 @@ import { theme } from '@/styles'
 import styled from 'styled-components'
 
 export const Header = () => {
+  const [width, setWidth] = useState(window.innerWidth)
+  const breakpoint = 768
+
+  useEffect(() => {
+    const handleWindowResize = () => setWidth(window.innerWidth)
+
+    window.addEventListener('resize', handleWindowResize)
+
+    return () => window.removeEventListener('resize', handleWindowResize)
+  }, [])
   const menuItems = ['Home', 'Tech stack', 'Projects', 'Contact']
 
   return (
@@ -15,8 +27,11 @@ export const Header = () => {
             <MyThemeIcon />
           </IconWrapper>
 
-          <Menu menuItems={menuItems} />
-          <MobileMenu menuItems={menuItems} />
+          {width > breakpoint ? (
+            <Menu menuItems={menuItems} />
+          ) : (
+            <MobileMenu menuItems={menuItems} />
+          )}
         </Wrapper>
       </Container>
     </StyledHeader>
