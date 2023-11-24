@@ -19,15 +19,16 @@ export const SplitedText: FC<SplitedTextProps> = ({ children }) => (
 )
 const Half = styled.span`
   overflow-y: hidden;
-  height: 48%;
+  height: 49%;
   position: absolute;
-  top: 2px;
+  top: 3px;
   left: 0;
   display: inline-block;
-  color: #a375ff;
+  color: ${theme.colors.accent.dark};
+  transition: 0.1s ease-in-out;
 
   & + & {
-    top: 50%;
+    top: 49%;
 
     span {
       display: inline-block;
@@ -38,20 +39,21 @@ const Half = styled.span`
 const Relative = styled.span`
   position: relative;
   color: transparent;
-  font-size: 31px;
+  font-size: 2.5rem;
 
   &::before {
     content: '';
     display: inline-block;
-    height: 1px;
-    background-color: #a375ff;
+    height: 0.2rem;
+    background-color: ${theme.colors.accent.dark};
     position: absolute;
 
-    top: 50%;
+    top: 48%;
     left: -10px;
     right: -10px;
     z-index: 1;
     transform: scale(0);
+    transition: 0.1s ease-in-out;
   }
 
   &:hover {
@@ -62,7 +64,6 @@ const Relative = styled.span`
     ${Half} {
       transform: skewX(12deg) translateX(0.1em);
       color: ${theme.colors.text.dark};
-
       & + ${Half} {
         transform: skewX(12deg) translateX(-0.1rem);
       }

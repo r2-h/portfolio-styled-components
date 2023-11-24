@@ -1,3 +1,5 @@
+import { Fade } from 'react-awesome-reveal'
+
 import { CSSIcon } from '@/assets/css'
 import { HTMLIcon } from '@/assets/html'
 import { NextIcon } from '@/assets/next'
@@ -15,22 +17,24 @@ import styled from 'styled-components'
 
 export const Skills = () => {
   return (
-    <StyledSkillsSection>
+    <StyledSkillsSection id={'Tech stack'}>
       <Container>
         <SectionTitle>My Tech Stack</SectionTitle>
         <SecondaryTitle>Technologies I’ve been working with recently</SecondaryTitle>
-        <Wrapper>
-          <Skill icon={<TSIcon />} marginTop={'10px'} title={'Type Script'} />
-          <Skill icon={<ReactIcon />} title={'React'} />
-          <Skill icon={<HTMLIcon />} marginTop={'7px'} title={'HTML'} />
-          <Skill icon={<CSSIcon />} marginTop={'7px'} title={'CSS'} />
-          <Skill icon={<ReduxIcon />} title={'Redux'} />
-          <Skill icon={<SCSSIcon />} title={'SCSS'} />
-          <Skill icon={<StorybookIcon />} marginTop={'-10px'} title={'Storybook'} />
-          <Skill icon={<StyledComponentsIcon />} marginTop={'11px'} title={'Styled Components'} />
-          <Skill icon={<NextIcon />} marginTop={'-6px'} title={'Next'} />
-          <Skill icon={<ReactHookFormIcon />} marginTop={'8px'} title={'React Hook Form'} />
-        </Wrapper>
+        <Fade duration={1500}>
+          <Wrapper>
+            <Skill icon={<TSIcon />} marginTop={'10px'} title={'Type Script'} />
+            <Skill icon={<ReactIcon />} title={'React'} />
+            <Skill icon={<HTMLIcon />} marginTop={'7px'} title={'HTML'} />
+            <Skill icon={<CSSIcon />} marginTop={'7px'} title={'CSS'} />
+            <Skill icon={<ReduxIcon />} title={'Redux'} />
+            <Skill icon={<SCSSIcon />} title={'SCSS'} />
+            <Skill icon={<StorybookIcon />} marginTop={'-10px'} title={'Storybook'} />
+            <Skill icon={<StyledComponentsIcon />} marginTop={'11px'} title={'Styled Components'} />
+            <Skill icon={<NextIcon />} marginTop={'-6px'} title={'Next'} />
+            <Skill icon={<ReactHookFormIcon />} marginTop={'8px'} title={'React Hook Form'} />
+          </Wrapper>
+        </Fade>
       </Container>
     </StyledSkillsSection>
   )
@@ -38,6 +42,9 @@ export const Skills = () => {
 
 const StyledSkillsSection = styled.section`
   margin-bottom: 210px;
+
+  position: relative;
+  z-index: 1;
 `
 const Wrapper = styled.div`
   display: flex;

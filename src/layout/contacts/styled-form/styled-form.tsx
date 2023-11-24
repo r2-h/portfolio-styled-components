@@ -16,26 +16,29 @@ export const StyledForm = () => {
 const Form = styled.form`
   max-width: 500px;
   width: 100%;
+
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin: 0 auto;
+  margin: 70px auto 0;
   align-items: center;
 
   textarea {
     resize: none;
-    height: 150px;
+    height: 75px;
   }
 `
 const Field = styled.input`
   width: 100%;
   background-color: ${theme.colors.project.dark};
   color: ${theme.colors.text.dark};
-  border: 1px solid ${theme.colors.project.dark};
-  min-height: 30px;
-  padding: 7px 15px;
+  border: none;
+  height: 25px;
+  padding: 5px 15px;
   font-family: 'Poppins', sans-serif;
   font-size: 14px;
+  border-radius: 1px;
+
   &::placeholder {
     text-transform: capitalize;
     color: ${theme.colors.textSecondary.dark};
@@ -43,6 +46,6 @@ const Field = styled.input`
   }
 
   &:focus-visible {
-    outline: 1px solid ${theme.colors.textSecondary.dark};
+    outline: 1px solid rgba(167, 167, 167, 0.5);
   }
 `

@@ -1,4 +1,5 @@
 import { FC, useState } from 'react'
+import { Link } from 'react-scroll'
 
 import { SplitedText } from '@/components'
 import { theme } from '@/styles'
@@ -11,7 +12,7 @@ export const MobileMenu: FC<MobileMenuProps> = ({ menuItems }) => {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <StyledMobileMenu>
+    <StyledMobileMenu isOpen={isOpen}>
       <BurgerButton isOpen={isOpen} onClick={() => setIsOpen(prev => !prev)}>
         <span></span>
       </BurgerButton>
@@ -19,26 +20,49 @@ export const MobileMenu: FC<MobileMenuProps> = ({ menuItems }) => {
       <PopUp isOpen={isOpen}>
         <ul>
           {menuItems.map((el, i) => (
-            <>
-              <List key={i}>
-                <Link href={''}>
-                  <SplitedText>{el}</SplitedText>
-                </Link>
-              </List>
-            </>
+            <li key={i}>
+              <StyledLink
+                activeClass={'active'}
+                duration={300}
+                onClick={() => setIsOpen(false)}
+                smooth
+                spy
+                to={el}
+              >
+                <SplitedText>{el}</SplitedText>
+              </StyledLink>
+            </li>
           ))}
         </ul>
       </PopUp>
     </StyledMobileMenu>
   )
 }
-const StyledMobileMenu = styled.div``
+const StyledMobileMenu = styled.div<{ isOpen: boolean }>`
+  margin-left: auto;
+  margin-top: 10px;
+  background-color: rgba(25, 25, 25, 0.8);
+  border-radius: 4px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  ${props =>
+    props.isOpen &&
+    css<{ isOpen: boolean }>`
+      background-color: inherit;
+    `}
+`
 const BurgerButton = styled.button<{ isOpen: boolean }>`
   z-index: 99999;
   align-items: center;
   justify-content: center;
   display: flex;
   cursor: pointer;
+  width: 37px;
+  height: 34px;
 
   span {
     display: block;
@@ -74,7 +98,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
       height: 2px;
       background-color: ${theme.colors.text.dark};
 
-      transform: translateY(10px);
+      transform: translateY(9px);
       ${props =>
         props.isOpen &&
         css<{ isOpen: boolean }>`
@@ -90,31 +114,32 @@ const PopUp = styled.nav<{ isOpen: boolean }>`
   bottom: 0;
   right: 0;
   left: 0;
-  z-index: 99999;
+  z-index: -1;
   position: fixed;
-  background-color: rgba(0, 0, 0, 0.8);
-  display: none;
+  background-color: rgba(0, 0, 0, 0.9);
+  transform: translateY(-100%);
+  transition: 0.7s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  ${props =>
-    props.isOpen &&
-    css<{ isOpen: boolean }>`
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    `}
   ul {
     display: flex;
-    gap: 35px;
+    gap: 4px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    transition: 0.4s ease-in-out;
   }
+  ${props =>
+    props.isOpen &&
+    css<{ isOpen: boolean }>`
+      transform: translateY(0);
+      & ul {
+        gap: 60px;
+      }
+    `}
 `
-const List = styled.li``
-const Link = styled.a`
-  text-decoration: none;
-
-  &:visited {
-    color: inherit;
-  }
+const StyledLink = styled(Link)`
+  cursor: pointer;
 `

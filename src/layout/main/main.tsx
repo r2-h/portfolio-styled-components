@@ -1,30 +1,46 @@
+import { Fade } from 'react-awesome-reveal'
+import Tilt from 'react-parallax-tilt'
+
 import { WavingHand } from '@/assets/waving-hand'
 import { Container, FlexWrapper } from '@/components'
 import { StyledText } from '@/components/styled-text'
 import { theme } from '@/styles'
 import { Font } from '@/styles/common'
-// eslint-disable-next-line import/no-named-as-default
 import styled from 'styled-components'
+import Typewriter from 'typewriter-effect'
 
 import myPhoto from '../../assets/my-photo.jpg'
-
 export const Main = () => {
   return (
-    <StyledMain>
+    <StyledMain id={'Home'}>
       <Container>
-        <Wrapper>
-          <div>
-            <Wrapper2>
-              Hi <WavingHandIcon />,
-            </Wrapper2>
-            <Name>My name is</Name>
-            <StyledName>Artur Hareksian</StyledName>
-            <Developer>A web developer</Developer>
-          </div>
-          <PhotoWrapper>
-            <Photo />
-          </PhotoWrapper>
-        </Wrapper>
+        <Fade duration={1500}>
+          <Wrapper>
+            <div>
+              <Wrapper2>
+                Hi <WavingHandIcon />,
+              </Wrapper2>
+              <Name>My name is</Name>
+              <StyledName>
+                Artur Hareksian<span style={{ visibility: 'hidden' }}>is</span>
+              </StyledName>
+              <Developer>
+                <Typewriter
+                  options={{
+                    autoStart: true,
+                    loop: true,
+                    strings: ['A web developer'],
+                  }}
+                />
+              </Developer>
+            </div>
+            <Tilt>
+              <PhotoWrapper>
+                <Photo />
+              </PhotoWrapper>
+            </Tilt>
+          </Wrapper>
+        </Fade>
       </Container>
     </StyledMain>
   )
@@ -63,6 +79,7 @@ const Name = styled.h2`
 const Developer = styled.h1`
   font-size: 58px;
   white-space: nowrap;
+
   ${Font({ Fmax: 58, Fmin: 35 })}
 `
 const Wrapper = styled(FlexWrapper)`

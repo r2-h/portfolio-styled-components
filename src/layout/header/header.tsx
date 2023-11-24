@@ -26,12 +26,8 @@ export const Header = () => {
           <IconWrapper>
             <MyThemeIcon />
           </IconWrapper>
-
-          {width > breakpoint ? (
-            <Menu menuItems={menuItems} />
-          ) : (
-            <MobileMenu menuItems={menuItems} />
-          )}
+          {width > breakpoint && <Menu menuItems={menuItems} />}
+          {width < breakpoint && <MobileMenu menuItems={menuItems} />}
         </Wrapper>
       </Container>
     </StyledHeader>
@@ -44,7 +40,6 @@ const StyledHeader = styled.div`
   top: 0;
   right: 0;
   left: 0;
-  padding: 20px 0;
 `
 const IconWrapper = styled.button`
   all: unset;

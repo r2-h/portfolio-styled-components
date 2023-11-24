@@ -1,3 +1,5 @@
+import { Fade } from 'react-awesome-reveal'
+
 import { TelegramIcon } from '@/assets/telegram'
 import { Container, SectionTitle, StyledText } from '@/components'
 import { StyledForm } from '@/layout/contacts/styled-form'
@@ -6,7 +8,7 @@ import styled from 'styled-components'
 
 export const Contacts = () => {
   return (
-    <StyledContacts>
+    <StyledContacts id={'Contact'}>
       <Container>
         <ContactContainer>
           <SectionTitle>Contact</SectionTitle>
@@ -20,8 +22,10 @@ export const Contacts = () => {
             </div>
           </ContactTitle>
 
-          <StyledEMail tabIndex={0}>r2mail1122@gmail.com</StyledEMail>
-          <StyledForm />
+          <Fade duration={1500}>
+            <StyledEMail>r2mail1122@gmail.com</StyledEMail>
+            <StyledForm />
+          </Fade>
         </ContactContainer>
       </Container>
     </StyledContacts>
@@ -29,26 +33,18 @@ export const Contacts = () => {
 }
 
 const StyledContacts = styled.div`
-  padding-top: 178px;
+  margin-top: 200px;
   display: flex;
   align-items: center;
   flex-direction: column;
-  border: 1px solid blue;
   justify-content: center;
+  position: relative;
+  margin-bottom: 210px;
 `
 const StyledEMail = styled(StyledText)`
   display: flex;
   justify-content: center;
   font-size: 32px;
-
-  cursor: pointer;
-
-  &:hover {
-    background: linear-gradient(45deg, #4888ff, #cb54ff);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-  }
 `
 const MyTelegramIcon = styled(TelegramIcon)`
   position: absolute;
@@ -70,13 +66,10 @@ const ContactTitle = styled.a`
   }
 
   &:hover {
-    background: linear-gradient(45deg, #13b0f5, #e70faa);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
+    color: ${theme.colors.text.dark};
 
     ${MyTelegramIcon} {
-      color: #7e75ff;
+      color: ${theme.colors.text.dark};
     }
   }
 `

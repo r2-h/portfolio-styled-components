@@ -30,7 +30,6 @@ export const Footer = () => {
 
 const StyledFooter = styled.div`
   margin-top: 100px;
-  border: 1px solid blue;
 `
 
 const Copyright = styled.span`

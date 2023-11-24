@@ -1,10 +1,14 @@
 export const theme = {
   colors: {
+    accent: {
+      dark: `#a375ff`,
+      light: `#666666`,
+    },
+
     bGround: {
       dark: '#191919',
       light: '#f5f5f5',
     },
-
     project: {
       dark: `#363636`,
       light: `#FFF`,

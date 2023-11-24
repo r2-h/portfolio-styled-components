@@ -14,6 +14,7 @@ export const Button = styled.button`
     &::before {
       height: 128%;
       width: 100%;
+      border-radius: 2px;
     }
   }
 
@@ -21,14 +22,16 @@ export const Button = styled.button`
     position: absolute;
     content: '';
     display: inline-block;
-    background: linear-gradient(45deg, #375df6, #9250d5);
+    background: linear-gradient(45deg, #5232c2, #76459b);
     width: 60%;
     height: 10px;
     left: 50%;
     bottom: -5px;
     z-index: -1;
     transform: translateX(-50%);
+    transition: 0.2s ease-in-out;
   }
+
   &:focus {
     outline: none;
     &::before {
