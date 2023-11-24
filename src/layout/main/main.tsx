@@ -54,6 +54,7 @@ const StyledMain = styled.div`
   font-size: 58px;
   font-weight: 700;
   align-items: center;
+  margin-bottom: 100px;
 `
 
 const PhotoWrapper = styled.div`

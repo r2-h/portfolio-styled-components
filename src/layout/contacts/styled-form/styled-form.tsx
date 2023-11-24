@@ -16,11 +16,10 @@ export const StyledForm = () => {
 const Form = styled.form`
   max-width: 500px;
   width: 100%;
-
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  margin: 70px auto 0;
+  gap: 12px;
+  margin: 10px auto 0;
   align-items: center;
 
   textarea {
@@ -33,7 +32,7 @@ const Field = styled.input`
   background-color: ${theme.colors.project.dark};
   color: ${theme.colors.text.dark};
   border: none;
-  height: 25px;
+  height: 30px;
   padding: 5px 15px;
   font-family: 'Poppins', sans-serif;
   font-size: 14px;

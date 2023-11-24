@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 export const Button = styled.button`
   font-size: 25px;
-  color: ${theme.colors.text.dark};
+  color: ${theme.colors.textSecondary.dark};
   position: relative;
   width: 180px;
 

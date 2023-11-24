@@ -41,8 +41,7 @@ export const Skills = () => {
 }
 
 const StyledSkillsSection = styled.section`
-  margin-bottom: 210px;
-
+  margin-bottom: 195px;
   position: relative;
   z-index: 1;
 `
@@ -59,6 +58,6 @@ const Wrapper = styled.div`
 
   @media screen and (max-width: 629px) {
     justify-content: space-around;
-    column-gap: 50px;
+    column-gap: 40px;
   }
 `

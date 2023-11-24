@@ -4,6 +4,7 @@ import { TelegramIcon } from '@/assets/telegram'
 import { Container, SectionTitle, StyledText } from '@/components'
 import { StyledForm } from '@/layout/contacts/styled-form'
 import { theme } from '@/styles'
+import { Font } from '@/styles/common'
 import styled from 'styled-components'
 
 export const Contacts = () => {
@@ -33,18 +34,17 @@ export const Contacts = () => {
 }
 
 const StyledContacts = styled.div`
-  margin-top: 200px;
+  margin: 200px 0;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  position: relative;
-  margin-bottom: 210px;
 `
 const StyledEMail = styled(StyledText)`
   display: flex;
   justify-content: center;
-  font-size: 32px;
+  font-weight: normal;
+  ${Font({ Fmax: 32, Fmin: 29 })};
 `
 const MyTelegramIcon = styled(TelegramIcon)`
   position: absolute;
@@ -53,7 +53,7 @@ const MyTelegramIcon = styled(TelegramIcon)`
   color: ${theme.colors.textSecondary.dark};
 `
 const ContactTitle = styled.a`
-  margin-bottom: 25px;
+  margin-bottom: 70px;
 
   display: flex;
   justify-content: center;

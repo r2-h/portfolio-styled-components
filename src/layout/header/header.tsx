@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 
-import { ThemeIcon } from '@/assets/them-icon'
 import { Container, Menu } from '@/components'
 import { MobileMenu } from '@/layout/header/mobile-menu'
 import { theme } from '@/styles'
@@ -23,9 +22,6 @@ export const Header = () => {
     <StyledHeader>
       <Container>
         <Wrapper>
-          <IconWrapper>
-            <MyThemeIcon />
-          </IconWrapper>
           {width > breakpoint && <Menu menuItems={menuItems} />}
           {width < breakpoint && <MobileMenu menuItems={menuItems} />}
         </Wrapper>
@@ -41,19 +37,9 @@ const StyledHeader = styled.div`
   right: 0;
   left: 0;
 `
-const IconWrapper = styled.button`
-  all: unset;
-  cursor: pointer;
-  display: flex;
-`
-const MyThemeIcon = styled(ThemeIcon)`
-  width: 35px;
-  height: 35px;
-  color: ${theme.colors.text.dark};
-  //  #7e75ff
-`
+
 const Wrapper = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 `

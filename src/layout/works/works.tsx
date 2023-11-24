@@ -59,8 +59,6 @@ const Wrapper = styled.div`
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 40px;
-  position: relative;
-  z-index: 22;
 
   @media screen and (max-width: 1429px) {
     justify-content: center;
