@@ -19,7 +19,7 @@ const Form = styled.form`
   display: flex;
   flex-direction: column;
   gap: 12px;
-  margin: 10px auto 0;
+  margin: 14px auto 0;
   align-items: center;
 
   textarea {

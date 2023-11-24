@@ -53,7 +53,7 @@ const MyTelegramIcon = styled(TelegramIcon)`
   color: ${theme.colors.textSecondary.dark};
 `
 const ContactTitle = styled.a`
-  margin-bottom: 70px;
+  margin-bottom: 80px;
 
   display: flex;
   justify-content: center;
