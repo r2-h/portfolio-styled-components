@@ -1,13 +1,43 @@
+import { ElementRef, useRef } from 'react'
+import { useForm } from 'react-hook-form'
+
 import { Button } from '@/components'
 import { theme } from '@/styles'
+import emailjs from '@emailjs/browser'
 import styled from 'styled-components'
 
 export const StyledForm = () => {
+  const form = useRef<ElementRef<'form'>>(null)
+  const { register, setValue } = useForm()
+
+  const sendEmail = (e: any) => {
+    e.preventDefault()
+    if (!form.current) {
+      return
+    }
+
+    emailjs.sendForm('service_2m7727n', 'template_mv1dosg', form.current, 'bt76FHB0e7d6D4CtS').then(
+      result => {
+        console.log(result.text)
+      },
+      error => {
+        console.log(error.text)
+      }
+    )
+    e.target.reset()
+  }
+
   return (
-    <Form>
-      <Field placeholder={'name'} />
-      <Field placeholder={'email'} />
-      <Field as={'textarea'} placeholder={'message'} />
+    <Form onSubmit={sendEmail} ref={form}>
+      <Field name={'user_name'} placeholder={'name'} required />
+      <Field
+        name={'Email'}
+        onChange={e => setValue('email', e.target.value)}
+        placeholder={'email'}
+        required
+      />
+      <input type={'hidden'} {...register('email')} />
+      <Field as={'textarea'} name={'message'} placeholder={'message'} required />
       <Button>Send message</Button>
     </Form>
   )
