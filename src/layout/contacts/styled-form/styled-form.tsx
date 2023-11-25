@@ -29,16 +29,23 @@ export const StyledForm = () => {
 
   return (
     <Form onSubmit={sendEmail} ref={form}>
+      <label>Name</label>
       <Field name={'user_name'} placeholder={'name'} required />
+
+      <label>Email</label>
       <Field
-        name={'Email'}
+        name={'email'}
         onChange={e => setValue('email', e.target.value)}
         placeholder={'email'}
         required
+        type={'email'}
       />
-      <input type={'hidden'} {...register('email')} />
+      <input type={'hidden'} {...register('email2')} />
+
+      <label>Message</label>
       <Field as={'textarea'} name={'message'} placeholder={'message'} required />
-      <Button>Send message</Button>
+
+      <Button type={'submit'}>Send message</Button>
     </Form>
   )
 }
