@@ -1,5 +1,4 @@
 import { ElementRef, useRef } from 'react'
-import { useForm } from 'react-hook-form'
 
 import { Button } from '@/components'
 import { theme } from '@/styles'
@@ -8,7 +7,6 @@ import styled from 'styled-components'
 
 export const StyledForm = () => {
   const form = useRef<ElementRef<'form'>>(null)
-  const { register, setValue } = useForm()
 
   const sendEmail = (e: any) => {
     e.preventDefault()
@@ -29,20 +27,10 @@ export const StyledForm = () => {
 
   return (
     <Form onSubmit={sendEmail} ref={form}>
-      <label>Name</label>
-      <Field name={'user_name'} placeholder={'name'} required />
+      <Field name={'name'} placeholder={'name'} required />
 
-      <label>Email</label>
-      <Field
-        name={'email'}
-        onChange={e => setValue('email', e.target.value)}
-        placeholder={'email'}
-        required
-        type={'email'}
-      />
-      <input type={'hidden'} {...register('email2')} />
+      <Field autoComplete={'email'} name={'email'} placeholder={'email'} required type={'email'} />
 
-      <label>Message</label>
       <Field as={'textarea'} name={'message'} placeholder={'message'} required />
 
       <Button type={'submit'}>Send message</Button>
