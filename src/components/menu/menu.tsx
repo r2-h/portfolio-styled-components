@@ -18,7 +18,7 @@ export const Menu: FC<MenuProps> = ({ menuItems }) => {
                 activeClass={'active'}
                 duration={350}
                 isDynamic
-                offset={el === 'Contact' ? 400 : -100}
+                offset={el === 'Contact' ? 300 : -100}
                 smooth
                 spy
                 to={el}

@@ -49,8 +49,8 @@ const StyledWork = styled.div`
   width: 373px;
   background-color: ${props => props.theme.colors.project};
   height: 570px;
-  border-radius: 20px;
-  filter: drop-shadow(2px 2px 50px rgba(0, 0, 0, 0.2));
+  border-radius: px;
+  filter: ${props => props.theme.colors.filter};
 `
 const Image = styled.img`
   object-fit: cover;

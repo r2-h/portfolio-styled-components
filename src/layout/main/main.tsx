@@ -1,5 +1,4 @@
 import { Fade } from 'react-awesome-reveal'
-import Tilt from 'react-parallax-tilt'
 
 import { WavingHand } from '@/assets/waving-hand'
 import { Container, FlexWrapper } from '@/components'
@@ -34,11 +33,10 @@ export const Main = () => {
                 />
               </Developer>
             </div>
-            <Tilt>
-              <PhotoWrapper>
-                <Photo />
-              </PhotoWrapper>
-            </Tilt>
+
+            <PhotoWrapper>
+              <Photo />
+            </PhotoWrapper>
           </Wrapper>
         </Fade>
       </Container>
@@ -58,11 +56,15 @@ const StyledMain = styled.div`
 `
 
 const PhotoWrapper = styled.div`
-  min-width: 350px;
-  height: 350px;
+  width: 400px;
+  height: 400px;
   border-radius: 50%;
-  background: linear-gradient(45deg, #13b0f5, #e70faa);
-  padding: 10px;
+  background: linear-gradient(45deg, rgb(81, 92, 171), rgb(118, 94, 164));
+  padding: 5px;
+  @media ${darkTheme.media.mobile} {
+    width: 350px;
+    height: 350px;
+  }
 `
 const Photo = styled.div`
   height: 100%;
@@ -75,13 +77,12 @@ const Photo = styled.div`
 `
 
 const Name = styled.h2`
-  ${Font({ Fmax: 58, Fmin: 35 })}
+  ${Font({ Fmax: 50, Fmin: 35 })}
 `
 const Developer = styled.h1`
   font-size: 58px;
   white-space: nowrap;
-
-  ${Font({ Fmax: 58, Fmin: 35 })}
+  ${Font({ Fmax: 50, Fmin: 35 })}
 `
 const Wrapper = styled(FlexWrapper)`
   gap: 50px;
@@ -93,19 +94,18 @@ const Wrapper = styled(FlexWrapper)`
 `
 const Wrapper2 = styled.div`
   display: flex;
-  align-items: flex-end;
-  ${Font({ Fmax: 58, Fmin: 35 })};
-  @media ${darkTheme.media.mobile} {
-    align-items: flex-start;
-  }
+  align-items: center;
+  ${Font({ Fmax: 50, Fmin: 35 })};
+  font-weight: bold;
 `
 const StyledName = styled(StyledText)`
   white-space: nowrap;
-  ${Font({ Fmax: 58, Fmin: 35 })}
+  ${Font({ Fmax: 50, Fmin: 35 })}
 `
 const WavingHandIcon = styled(WavingHand)`
+  margin-bottom: 4px;
   @media ${darkTheme.media.mobile} {
-    width: 60px;
-    height: 60px;
+    width: 48px;
+    height: 48px;
   }
 `

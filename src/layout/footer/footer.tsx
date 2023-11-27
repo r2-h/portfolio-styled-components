@@ -3,7 +3,6 @@ import { useTranslation } from 'react-i18next'
 import { Container } from '@/components'
 import { GoTopButton } from '@/components/go-top-button/go-top-button'
 import styled from 'styled-components'
-
 export const Footer = () => {
   const { t } = useTranslation()
 
@@ -26,5 +25,5 @@ const StyledFooter = styled.div`
 
 const Wrapper = styled.div`
   border-top: 1px solid ${props => props.theme.colors.line};
-  padding: 30px;
+  padding: 30px 0;
 `

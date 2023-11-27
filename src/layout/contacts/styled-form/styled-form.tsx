@@ -1,7 +1,7 @@
 import { ElementRef, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 
-import { Button } from '@/components'
+import { ButtonWithIcon } from '@/components/button-with-icon'
 import emailjs from '@emailjs/browser'
 import styled from 'styled-components'
 
@@ -41,7 +41,7 @@ export const StyledForm = () => {
 
       <Field as={'textarea'} name={'message'} placeholder={t('Message')} required />
 
-      <Button type={'submit'}>{t('Send message')}</Button>
+      <ButtonWithIcon type={'submit'}>{t('send message')}</ButtonWithIcon>
     </Form>
   )
 }
@@ -70,7 +70,7 @@ const Field = styled.input`
   font-family: 'Poppins', sans-serif;
   font-size: 14px;
   border-radius: 1px;
-  filter: drop-shadow(2px 2px 50px rgba(0, 0, 0, 0.2));
+  filter: ${props => props.theme.colors.filter};
 
   &::placeholder {
     text-transform: capitalize;

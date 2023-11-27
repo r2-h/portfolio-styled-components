@@ -42,14 +42,14 @@ export const Particle = () => {
         },
         particles: {
           color: {
-            value: '#ffffff',
+            value: 'rgb(255,255,255)',
           },
           links: {
-            color: '#ffffff',
+            color: 'rgb(255,255,255)',
             distance: 200,
             enable: true,
             opacity: 0.2,
-            width: 1,
+            width: 0.7,
           },
           move: {
             direction: 'none',
@@ -69,13 +69,13 @@ export const Particle = () => {
             value: 50,
           },
           opacity: {
-            value: 0.5,
+            value: 0.2,
           },
           shape: {
             type: 'circle',
           },
           size: {
-            value: { max: 1, min: 0.2 },
+            value: { max: 0.5, min: 0.1 },
           },
         },
       }}
