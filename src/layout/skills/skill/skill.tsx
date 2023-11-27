@@ -1,7 +1,6 @@
 import { FC, ReactNode } from 'react'
 
 import { FlexWrapper } from '@/components'
-import { darkTheme } from '@/styles'
 import styled from 'styled-components'
 
 type SkillProps = {
@@ -31,7 +30,7 @@ const StyledSkill = styled.div`
 
 const SkillTitle = styled.h3`
   max-width: 90px;
-  color: ${darkTheme.colors.textSecondary};
+  color: ${props => props.theme.colors.textSecondary};
   font-weight: normal;
   font-size: 15px;
   opacity: 0;

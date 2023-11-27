@@ -1,6 +1,5 @@
 import { FC } from 'react'
 
-import { GitHubIcon } from '@/assets/github'
 import { LinkIcon } from '@/assets/link'
 import styled from 'styled-components'
 
@@ -31,11 +30,11 @@ export const Work: FC<WorkProps> = ({
         <TechStack>Tech stack: {techStack}</TechStack>
         <LinkWrapper>
           <Link href={demoLink} target={'_blank'}>
-            <LinkIcon />
+            <StyledLinkIcon />
             demo
           </Link>
           <Link href={codeLink} target={'_blank'}>
-            <GitHubIcon />
+            <StyledGitHubIcon />
             code
           </Link>
         </LinkWrapper>
@@ -95,4 +94,14 @@ const Link = styled.a`
   gap: 5px;
   text-decoration: underline;
   color: ${props => props.theme.colors.link};
+`
+const StyledLinkIcon = styled(LinkIcon)`
+  path {
+    stroke: ${props => props.theme.colors.link};
+  }
+`
+const StyledGitHubIcon = styled(LinkIcon)`
+  path {
+    stroke: ${props => props.theme.colors.link};
+  }
 `

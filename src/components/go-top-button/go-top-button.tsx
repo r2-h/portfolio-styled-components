@@ -34,6 +34,6 @@ const StyledGoTopButton = styled.button`
   border-radius: 4px;
   position: fixed;
   z-index: 100;
-  bottom: 22px;
+  bottom: 19px;
   right: 36px;
 `

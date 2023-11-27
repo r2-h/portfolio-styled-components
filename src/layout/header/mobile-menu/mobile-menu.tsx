@@ -41,7 +41,7 @@ export const MobileMenu: FC<MobileMenuProps> = ({ menuItems }) => {
 const StyledMobileMenu = styled.div<{ isOpen: boolean }>`
   margin-left: auto;
   margin-top: 10px;
-  background-color: rgba(25, 25, 25, 0.8);
+  background-color: ${props => props.theme.colors.navigation};
   border-radius: 4px;
   width: 50px;
   height: 50px;
@@ -68,7 +68,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
     display: block;
     width: 36px;
     height: 2px;
-    background-color: ${darkTheme.colors.text.dark};
+    background-color: ${props => props.theme.colors.text};
     cursor: pointer;
 
     ${props =>
@@ -81,13 +81,14 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
       display: block;
       width: 36px;
       height: 2px;
-      background-color: ${darkTheme.colors.text.dark};
+      background-color: ${props => props.theme.colors.text};
       transform: translateY(-10px);
 
       ${props =>
         props.isOpen &&
         css<{ isOpen: boolean }>`
           transform: rotate(-45deg) translateY(1px);
+          background-color: ${darkTheme.colors.text};
         `}
     }
 
@@ -96,7 +97,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
       display: block;
       width: 26px;
       height: 2px;
-      background-color: ${darkTheme.colors.text.dark};
+      background-color: ${props => props.theme.colors.text};
 
       transform: translateY(9px);
       ${props =>
@@ -104,6 +105,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
         css<{ isOpen: boolean }>`
           transform: rotate(45deg) translateY(0);
           width: 36px;
+          background-color: ${darkTheme.colors.text};
         `}
     }
   }
