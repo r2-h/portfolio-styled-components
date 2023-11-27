@@ -37,7 +37,7 @@ const StyledMenu = styled.nav`
   background-color: ${props => props.theme.colors.navigation};
   padding: 10px 10px;
   border-radius: 4px;
-  color: ${props => props.theme.colors.text};
+  color: ${props => props.theme.colors.textSecondary};
 `
 const Ul = styled.ul`
   display: flex;
@@ -48,7 +48,7 @@ const MyLink = styled(Link)`
   font-size: 18px;
   cursor: pointer;
   &:hover {
-    color: white;
+    color: ${props => props.theme.colors.hover.text};
   }
   &.active {
     color: ${props => props.theme.colors.accent};

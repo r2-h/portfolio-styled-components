@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react'
 
-import { ThemeIcon } from '@/assets/them-icon'
 import { Container, Menu } from '@/components'
+import { LangSwitcher } from '@/components/lang-switcher'
+import { ToggleThemeBtn } from '@/components/toggle-theme-btn'
 import { MobileMenu } from '@/layout/header/mobile-menu'
 import styled from 'styled-components'
 
@@ -25,9 +26,10 @@ export const Header = ({ toggleTheme }: HeaderProps) => {
     <StyledHeader>
       <Container>
         <Wrapper>
-          <ToggleThemeBtn onClick={toggleTheme}>
-            <StyledThemeIcon />
-          </ToggleThemeBtn>
+          <Wrapper2>
+            <ToggleThemeBtn toggleTheme={toggleTheme} />
+            <LangSwitcher />
+          </Wrapper2>
           {width > breakpoint && <Menu menuItems={menuItems} />}
           {width < breakpoint && <MobileMenu menuItems={menuItems} />}
         </Wrapper>
@@ -49,18 +51,8 @@ const Wrapper = styled.div`
   justify-content: space-between;
   align-items: center;
 `
-const ToggleThemeBtn = styled.button`
-  cursor: pointer;
-  padding: 5px;
-  margin-top: 5px;
+const Wrapper2 = styled.div`
   display: flex;
-  background-color: ${props => props.theme.colors.navigation};
-  border-radius: 5px;
-`
-const StyledThemeIcon = styled(ThemeIcon)`
-  width: 34px;
-  height: 34px;
-  path {
-    fill: ${props => props.theme.colors.themeIcon};
-  }
+  align-items: center;
+  gap: 25px;
 `

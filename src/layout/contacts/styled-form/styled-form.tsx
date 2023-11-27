@@ -1,10 +1,13 @@
 import { ElementRef, useRef } from 'react'
+import { useTranslation } from 'react-i18next'
 
 import { Button } from '@/components'
 import emailjs from '@emailjs/browser'
 import styled from 'styled-components'
 
 export const StyledForm = () => {
+  const { t } = useTranslation()
+
   const form = useRef<ElementRef<'form'>>(null)
 
   const sendEmail = (e: any) => {
@@ -26,13 +29,19 @@ export const StyledForm = () => {
 
   return (
     <Form onSubmit={sendEmail} ref={form}>
-      <Field name={'name'} placeholder={'name'} required />
+      <Field name={'name'} placeholder={t('Name')} required />
 
-      <Field autoComplete={'email'} name={'email'} placeholder={'email'} required type={'email'} />
+      <Field
+        autoComplete={'email'}
+        name={'email'}
+        placeholder={t('Email')}
+        required
+        type={'email'}
+      />
 
-      <Field as={'textarea'} name={'message'} placeholder={'message'} required />
+      <Field as={'textarea'} name={'message'} placeholder={t('Message')} required />
 
-      <Button type={'submit'}>Send message</Button>
+      <Button type={'submit'}>{t('Send message')}</Button>
     </Form>
   )
 }

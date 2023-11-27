@@ -1,6 +1,5 @@
-import { useState } from 'react'
+import { Suspense, useState } from 'react'
 
-import { GoTopButton } from '@/components/go-top-button/go-top-button'
 import { Particle } from '@/components/particle/particle'
 import { Contacts } from '@/layout/contacts'
 import { Footer } from '@/layout/footer'
@@ -21,14 +20,15 @@ export const App = () => {
 
   return (
     <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
-      <Particle />
-      <Header toggleTheme={toggleTheme} />
-      <Main />
-      <Skills />
-      <Works />
-      <Contacts />
-      <Footer />
-      <GoTopButton />
+      <Suspense fallback={''}>
+        <Particle />
+        <Header toggleTheme={toggleTheme} />
+        <Main />
+        <Skills />
+        <Works />
+        <Contacts />
+        <Footer />
+      </Suspense>
     </ThemeProvider>
   )
 }

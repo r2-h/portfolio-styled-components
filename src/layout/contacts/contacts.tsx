@@ -1,4 +1,5 @@
 import { Fade } from 'react-awesome-reveal'
+import { useTranslation } from 'react-i18next'
 
 import { TelegramIcon } from '@/assets/telegram'
 import { Container, SectionTitle, StyledText } from '@/components'
@@ -7,15 +8,17 @@ import { Font } from '@/styles/common'
 import styled from 'styled-components'
 
 export const Contacts = () => {
+  const { t } = useTranslation()
+
   return (
     <StyledContacts id={'Contact'}>
       <Container>
         <ContactContainer>
-          <SectionTitle>Contact</SectionTitle>
+          <SectionTitle>{t('Contact')}</SectionTitle>
 
           <ContactTitle href={'https://t.me/hareksian'} target={'_blank'}>
             <div>
-              For any questions please text me:
+              {t('For any questions please text me:')}
               <IconWrapper>
                 <MyTelegramIcon />
               </IconWrapper>

@@ -7,6 +7,7 @@ import styled from 'styled-components'
 type GoTopButtonProps = {}
 export const GoTopButton: FC<GoTopButtonProps> = ({}) => {
   const [showButton, setShowButton] = useState(false)
+  const [rightPosition, setRightPosition] = useState(36)
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
@@ -16,24 +17,45 @@ export const GoTopButton: FC<GoTopButtonProps> = ({}) => {
         setShowButton(false)
       }
     })
-  }, [])
+
+    window.addEventListener('resize', updateSize)
+  }, [rightPosition])
+
+  const updateSize = () => {
+    setRightPosition(window.innerWidth * 0.02) // 1% of the screen width
+  }
 
   return (
     showButton && (
-      <StyledGoTopButton onClick={() => animateScroll.scrollToTop({ duration: 500 })}>
+      <StyledGoTopButton
+        onClick={() => animateScroll.scrollToTop({ duration: 500 })}
+        right={rightPosition}
+      >
         <GoToTopIcon />
       </StyledGoTopButton>
     )
   )
 }
-const StyledGoTopButton = styled.button`
+
+interface StyledGoTopButtonProps {
+  // children?: React.ReactNode
+  // onClick: () => void
+  right: number
+}
+const StyledGoTopButton = styled.button<StyledGoTopButtonProps>`
   cursor: pointer;
   height: 40px;
   width: 40px;
-  background-color: ${props => props.theme.colors.goToTopButton};
+  background-color: ${props => props.theme.colors.navigation};
   border-radius: 4px;
   position: fixed;
   z-index: 100;
   bottom: 19px;
-  right: 36px;
+  right: ${props => `${props.right}px`}; // use computed right position
+  path {
+    fill: ${props => props.theme.colors.textSecondary};
+  }
+  &:hover {
+    background-color: ${props => props.theme.colors.hover.navigation};
+  }
 `
