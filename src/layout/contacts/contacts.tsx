@@ -47,8 +47,9 @@ const StyledContacts = styled.div`
 const StyledEMail = styled(StyledText)`
   display: flex;
   justify-content: center;
+  color: ${props => props.theme.colors.eMail};
   font-weight: normal;
-  ${Font({ Fmax: 32, Fmin: 29 })};
+  ${Font({ Fmax: 30, Fmin: 28 })};
 `
 const MyTelegramIcon = styled(TelegramIcon)`
   position: absolute;

@@ -49,13 +49,13 @@ const StyledWork = styled.div`
   width: 373px;
   background-color: ${props => props.theme.colors.project};
   height: 570px;
-  border-radius: px;
+  border-radius: 5px;
   filter: ${props => props.theme.colors.filter};
 `
 const Image = styled.img`
   object-fit: cover;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
   min-height: 260px;
 `
 
@@ -71,15 +71,18 @@ const Title = styled.h3`
   font-size: 28px;
   font-weight: normal;
   text-align: center;
+  color: ${props => props.theme.colors.textSecondary};
 `
 
 const Text = styled.div`
   text-align: start;
   font-size: 16px;
+  color: ${props => props.theme.colors.textSecondary};
 `
 
 const TechStack = styled.div`
   margin-bottom: 20px;
+  color: ${props => props.theme.colors.textSecondary};
   font-size: 16px;
   text-align: start;
 `
@@ -93,15 +96,22 @@ const Link = styled.a`
   display: flex;
   gap: 5px;
   text-decoration: underline;
-  color: ${props => props.theme.colors.link};
+  color: ${props => props.theme.colors.textSecondary};
+
+  &:hover {
+    color: ${props => props.theme.colors.hover.text};
+    path {
+      stroke: ${props => props.theme.colors.hover.text};
+    }
+  }
 `
 const StyledLinkIcon = styled(LinkIcon)`
   path {
-    stroke: ${props => props.theme.colors.link};
+    stroke: ${props => props.theme.colors.textSecondary};
   }
 `
 const StyledGitHubIcon = styled(LinkIcon)`
   path {
-    stroke: ${props => props.theme.colors.link};
+    stroke: ${props => props.theme.colors.textSecondary};
   }
 `

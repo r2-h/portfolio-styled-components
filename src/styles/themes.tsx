@@ -7,6 +7,7 @@ export const darkTheme = {
       color: `#A7A7A7`,
       hover: 'rgb(44,44,44)',
     },
+    eMail: 'linear-gradient(45deg, rgb(81, 92, 171), rgb(118, 94, 164))',
     goToTopButton: 'rgba(25, 25, 25, 0.7)',
     hover: {
       navigation: 'rgba(49,49,49,0.8)',
@@ -32,6 +33,7 @@ export const lightTheme = {
       color: 'white',
       hover: 'rgb(150,150,150)',
     },
+    eMail: `#666666`,
     filter: 'drop-shadow(2px 2px 50px rgba(0, 0, 0, 0.2))',
     goToTopButton: 'rgba(121,121,121,0.7)',
     hover: {
