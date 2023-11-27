@@ -51,7 +51,7 @@ export const Works = () => {
 }
 
 const StyledWorks = styled.div`
-  margin-bottom: 210px;
+  background-color: ${props => props.theme.colors.bGround};
 `
 const Wrapper = styled.div`
   display: flex;

@@ -1,7 +1,6 @@
 import { ElementRef, useRef } from 'react'
 
 import { Button } from '@/components'
-import { theme } from '@/styles'
 import emailjs from '@emailjs/browser'
 import styled from 'styled-components'
 
@@ -54,18 +53,19 @@ const Form = styled.form`
 `
 const Field = styled.input`
   width: 100%;
-  background-color: ${theme.colors.project.dark};
-  color: ${theme.colors.text.dark};
+  background-color: ${props => props.theme.colors.project};
+  color: ${props => props.theme.colors.text};
   border: none;
   height: 30px;
   padding: 5px 15px;
   font-family: 'Poppins', sans-serif;
   font-size: 14px;
   border-radius: 1px;
+  filter: drop-shadow(2px 2px 50px rgba(0, 0, 0, 0.2));
 
   &::placeholder {
     text-transform: capitalize;
-    color: ${theme.colors.textSecondary.dark};
+    color: ${props => props.theme.colors.textSecondary};
     opacity: 0.5;
   }
 

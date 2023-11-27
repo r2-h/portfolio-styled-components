@@ -1,6 +1,6 @@
 import { FC } from 'react'
 
-import { theme } from '@/styles'
+import { darkTheme } from '@/styles'
 import styled from 'styled-components'
 
 type SplitedTextProps = {
@@ -24,7 +24,7 @@ const Half = styled.span`
   top: 3px;
   left: 0;
   display: inline-block;
-  color: ${theme.colors.accent.dark};
+  color: ${darkTheme.colors.accent};
   transition: 0.1s ease-in-out;
 
   & + & {
@@ -45,7 +45,7 @@ const Relative = styled.span`
     content: '';
     display: inline-block;
     height: 0.2rem;
-    background-color: ${theme.colors.accent.dark};
+    background-color: ${darkTheme.colors.accent};
     position: absolute;
 
     top: 48%;
@@ -63,7 +63,7 @@ const Relative = styled.span`
 
     ${Half} {
       transform: skewX(12deg) translateX(0.1em);
-      color: ${theme.colors.text.dark};
+      color: ${darkTheme.colors.text};
       & + ${Half} {
         transform: skewX(12deg) translateX(-0.1rem);
       }

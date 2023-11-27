@@ -30,7 +30,7 @@ const StyledGoTopButton = styled.button`
   cursor: pointer;
   height: 40px;
   width: 40px;
-  background-color: rgba(25, 25, 25, 0.7);
+  background-color: ${props => props.theme.colors.goToTopButton};
   border-radius: 4px;
   position: fixed;
   z-index: 100;

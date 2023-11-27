@@ -41,9 +41,9 @@ export const Skills = () => {
 }
 
 const StyledSkillsSection = styled.section`
-  margin-bottom: 195px;
-  position: relative;
-  z-index: 1;
+  padding-bottom: 195px;
+  padding-top: 100px;
+  background-color: ${props => props.theme.colors.bGround};
 `
 const Wrapper = styled.div`
   display: flex;

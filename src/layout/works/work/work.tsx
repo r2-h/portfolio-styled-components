@@ -2,7 +2,6 @@ import { FC } from 'react'
 
 import { GitHubIcon } from '@/assets/github'
 import { LinkIcon } from '@/assets/link'
-import { theme } from '@/styles'
 import styled from 'styled-components'
 
 type WorkProps = {
@@ -49,9 +48,10 @@ const StyledWork = styled.div`
   display: flex;
   flex-direction: column;
   width: 373px;
-  background-color: ${theme.colors.project.dark};
+  background-color: ${props => props.theme.colors.project};
   height: 570px;
   border-radius: 20px;
+  filter: drop-shadow(2px 2px 50px rgba(0, 0, 0, 0.2));
 `
 const Image = styled.img`
   object-fit: cover;
@@ -65,6 +65,7 @@ const Wrapper = styled.div`
   grid-template-rows: auto 1fr auto;
   margin: 27px;
   height: 100%;
+  color: ${props => props.theme.colors.text};
 `
 const Title = styled.h3`
   margin-bottom: 17px;
@@ -93,4 +94,5 @@ const Link = styled.a`
   display: flex;
   gap: 5px;
   text-decoration: underline;
+  color: ${props => props.theme.colors.link};
 `

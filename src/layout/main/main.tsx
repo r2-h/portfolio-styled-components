@@ -4,7 +4,7 @@ import Tilt from 'react-parallax-tilt'
 import { WavingHand } from '@/assets/waving-hand'
 import { Container, FlexWrapper } from '@/components'
 import { StyledText } from '@/components/styled-text'
-import { theme } from '@/styles'
+import { darkTheme } from '@/styles'
 import { Font } from '@/styles/common'
 import styled from 'styled-components'
 import Typewriter from 'typewriter-effect'
@@ -48,13 +48,13 @@ export const Main = () => {
 
 const StyledMain = styled.div`
   min-height: 100vh;
-  color: ${theme.colors.text.dark};
+  color: ${props => props.theme.colors.text};
+  background-color: ${props => props.theme.colors.bGround};
   display: flex;
   line-height: 70px;
   font-size: 58px;
   font-weight: 700;
   align-items: center;
-  margin-bottom: 100px;
 `
 
 const PhotoWrapper = styled.div`
@@ -95,7 +95,7 @@ const Wrapper2 = styled.div`
   display: flex;
   align-items: flex-end;
   ${Font({ Fmax: 58, Fmin: 35 })};
-  @media ${theme.media.mobile} {
+  @media ${darkTheme.media.mobile} {
     align-items: flex-start;
   }
 `
@@ -104,7 +104,7 @@ const StyledName = styled(StyledText)`
   ${Font({ Fmax: 58, Fmin: 35 })}
 `
 const WavingHandIcon = styled(WavingHand)`
-  @media ${theme.media.mobile} {
+  @media ${darkTheme.media.mobile} {
     width: 60px;
     height: 60px;
   }

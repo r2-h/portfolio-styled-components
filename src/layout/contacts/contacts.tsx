@@ -3,7 +3,6 @@ import { Fade } from 'react-awesome-reveal'
 import { TelegramIcon } from '@/assets/telegram'
 import { Container, SectionTitle, StyledText } from '@/components'
 import { StyledForm } from '@/layout/contacts/styled-form'
-import { theme } from '@/styles'
 import { Font } from '@/styles/common'
 import styled from 'styled-components'
 
@@ -34,11 +33,13 @@ export const Contacts = () => {
 }
 
 const StyledContacts = styled.div`
-  margin: 200px 0;
+  padding-bottom: 280px;
+  padding-top: 480px;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  background-color: ${props => props.theme.colors.bGround};
 `
 const StyledEMail = styled(StyledText)`
   display: flex;
@@ -50,7 +51,7 @@ const MyTelegramIcon = styled(TelegramIcon)`
   position: absolute;
   min-height: 40px;
   min-width: 40px;
-  color: ${theme.colors.textSecondary.dark};
+  color: ${props => props.theme.colors.textSecondary};
 `
 const ContactTitle = styled.a`
   margin-bottom: 80px;
@@ -58,7 +59,7 @@ const ContactTitle = styled.a`
   display: flex;
   justify-content: center;
   cursor: pointer;
-  color: ${theme.colors.textSecondary.dark};
+  color: ${props => props.theme.colors.textSecondary};
   font-size: 32px;
 
   @media screen and (max-width: 860px) {
@@ -66,10 +67,10 @@ const ContactTitle = styled.a`
   }
 
   &:hover {
-    color: ${theme.colors.text.dark};
+    color: ${props => props.theme.colors.text};
 
     ${MyTelegramIcon} {
-      color: ${theme.colors.text.dark};
+      color: ${props => props.theme.colors.text};
     }
   }
 `

@@ -1,9 +1,8 @@
-import { theme } from '@/styles'
 import styled from 'styled-components'
 
 export const Button = styled.button`
   font-size: 25px;
-  color: ${theme.colors.textSecondary.dark};
+  color: ${props => props.theme.colors.textSecondary};
   position: relative;
   width: 180px;
 
@@ -22,7 +21,7 @@ export const Button = styled.button`
     position: absolute;
     content: '';
     display: inline-block;
-    background: linear-gradient(45deg, #5232c2, #76459b);
+    background: ${props => props.theme.colors.button};
     width: 60%;
     height: 10px;
     left: 50%;
@@ -34,6 +33,7 @@ export const Button = styled.button`
 
   &:focus {
     outline: none;
+
     &::before {
       height: 128%;
       width: 100%;

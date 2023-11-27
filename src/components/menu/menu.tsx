@@ -1,7 +1,6 @@
 import { FC } from 'react'
 import { Link } from 'react-scroll'
 
-import { theme } from '@/styles'
 import styled from 'styled-components'
 
 type MenuProps = {
@@ -19,7 +18,7 @@ export const Menu: FC<MenuProps> = ({ menuItems }) => {
                 activeClass={'active'}
                 duration={350}
                 isDynamic
-                offset={el === 'Contact' ? -200 : -100}
+                offset={el === 'Contact' ? 400 : -100}
                 smooth
                 spy
                 to={el}
@@ -35,9 +34,10 @@ export const Menu: FC<MenuProps> = ({ menuItems }) => {
 }
 
 const StyledMenu = styled.nav`
-  background-color: rgba(25, 25, 25, 0.8);
+  background-color: ${props => props.theme.colors.navigation};
   padding: 10px 10px;
   border-radius: 4px;
+  color: ${props => props.theme.colors.text};
 `
 const Ul = styled.ul`
   display: flex;
@@ -51,6 +51,6 @@ const MyLink = styled(Link)`
     color: white;
   }
   &.active {
-    color: ${theme.colors.accent.dark};
+    color: ${props => props.theme.colors.accent};
   }
 `

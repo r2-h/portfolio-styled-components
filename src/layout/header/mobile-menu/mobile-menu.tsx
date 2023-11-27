@@ -2,7 +2,7 @@ import { FC, useState } from 'react'
 import { Link } from 'react-scroll'
 
 import { SplitedText } from '@/components'
-import { theme } from '@/styles'
+import { darkTheme } from '@/styles'
 import styled, { css } from 'styled-components'
 
 type MobileMenuProps = {
@@ -68,7 +68,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
     display: block;
     width: 36px;
     height: 2px;
-    background-color: ${theme.colors.text.dark};
+    background-color: ${darkTheme.colors.text.dark};
     cursor: pointer;
 
     ${props =>
@@ -81,7 +81,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
       display: block;
       width: 36px;
       height: 2px;
-      background-color: ${theme.colors.text.dark};
+      background-color: ${darkTheme.colors.text.dark};
       transform: translateY(-10px);
 
       ${props =>
@@ -96,7 +96,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
       display: block;
       width: 26px;
       height: 2px;
-      background-color: ${theme.colors.text.dark};
+      background-color: ${darkTheme.colors.text.dark};
 
       transform: translateY(9px);
       ${props =>

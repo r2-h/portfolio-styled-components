@@ -1,11 +1,14 @@
 import { useEffect, useState } from 'react'
 
+import { ThemeIcon } from '@/assets/them-icon'
 import { Container, Menu } from '@/components'
 import { MobileMenu } from '@/layout/header/mobile-menu'
-import { theme } from '@/styles'
 import styled from 'styled-components'
 
-export const Header = () => {
+type HeaderProps = {
+  toggleTheme: () => void
+}
+export const Header = ({ toggleTheme }: HeaderProps) => {
   const [width, setWidth] = useState(window.innerWidth)
   const breakpoint = 768
 
@@ -22,6 +25,9 @@ export const Header = () => {
     <StyledHeader>
       <Container>
         <Wrapper>
+          <ToggleThemeBtn onClick={toggleTheme}>
+            <ThemeIcon />
+          </ToggleThemeBtn>
           {width > breakpoint && <Menu menuItems={menuItems} />}
           {width < breakpoint && <MobileMenu menuItems={menuItems} />}
         </Wrapper>
@@ -29,10 +35,11 @@ export const Header = () => {
     </StyledHeader>
   )
 }
+
 const StyledHeader = styled.div`
   position: fixed;
   z-index: 9999;
-  color: ${theme.colors.text.dark};
+  ${props => props.theme.colors.bGround};
   top: 0;
   right: 0;
   left: 0;
@@ -40,6 +47,10 @@ const StyledHeader = styled.div`
 
 const Wrapper = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+`
+const ToggleThemeBtn = styled.button`
+  cursor: pointer;
+  background-color: blueviolet;
 `
