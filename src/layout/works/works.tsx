@@ -5,8 +5,8 @@ import { Container, SectionTitle } from '@/components'
 import { Work } from '@/layout/works/work/work'
 import styled from 'styled-components'
 
-import flashcardsImg from '../../assets/flashcards.jpg'
-import socialImg from '../../assets/social-network.jpg'
+import flashcardsImg from '../../assets/flashcards2.jpg'
+import socialImg from '../../assets/socialnetwork2.jpg'
 import todoImg from '../../assets/todo.jpg'
 export const Works = () => {
   const { i18n, t } = useTranslation()
