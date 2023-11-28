@@ -19,7 +19,7 @@ export const SplitedText: FC<SplitedTextProps> = ({ children }) => (
 )
 const Half = styled.span`
   overflow-y: hidden;
-  height: 49%;
+  height: 48%;
   position: absolute;
   top: 3px;
   left: 0;
@@ -28,11 +28,11 @@ const Half = styled.span`
   transition: 0.1s ease-in-out;
 
   & + & {
-    top: 51%;
+    top: 52%;
 
     span {
       display: inline-block;
-      transform: translateY(-49%);
+      transform: translateY(-50%);
     }
   }
 `
