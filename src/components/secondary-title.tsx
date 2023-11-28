@@ -5,5 +5,4 @@ export const SecondaryTitle = styled.h3`
   font-size: 25px;
   text-align: center;
   font-weight: normal;
-  margin-bottom: 90px;
 `

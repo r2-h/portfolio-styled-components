@@ -31,7 +31,7 @@ export const darkTheme = {
 }
 export const lightTheme = {
   colors: {
-    accent: `#884eff`,
+    accent: 'black',
     bGround: '#f5f5f5',
     button: {
       background: 'rgb(196,196,196)',

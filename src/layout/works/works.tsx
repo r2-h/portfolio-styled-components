@@ -6,7 +6,7 @@ import { Work } from '@/layout/works/work/work'
 import styled from 'styled-components'
 
 import flashcardsImg from '../../assets/flashcards2.jpg'
-import socialImg from '../../assets/socialnetwork2.jpg'
+import socialImg from '../../assets/social-network-icon.jpg'
 import todoImg from '../../assets/todo.jpg'
 export const Works = () => {
   const { i18n, t } = useTranslation()
@@ -14,7 +14,7 @@ export const Works = () => {
   return (
     <StyledWorks id={i18n.language === 'en' ? 'PROJECTS' : 'ПРОЕКТЫ'}>
       <Container>
-        <WorksTitle>{t('Projects')}</WorksTitle>
+        <SectionTitle>{t('Projects')}</SectionTitle>
         <Wrapper>
           <Fade duration={1500}>
             <Work
@@ -70,7 +70,4 @@ const Wrapper = styled.div`
   @media screen and (max-width: 1429px) {
     justify-content: center;
   }
-`
-const WorksTitle = styled(SectionTitle)`
-  margin-bottom: 90px;
 `

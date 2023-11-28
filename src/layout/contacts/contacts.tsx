@@ -15,16 +15,15 @@ export const Contacts = () => {
         <ContactContainer>
           <SectionTitle>{t('Contact')}</SectionTitle>
 
-          <ContactTitle href={'https://t.me/hareksian'} target={'_blank'}>
-            <div>
-              {t('For any questions please text me:')}
-              <IconWrapper>
-                <MyTelegramIcon />
-              </IconWrapper>
-            </div>
-          </ContactTitle>
-
           <Fade duration={1500}>
+            <ContactTitle href={'https://t.me/hareksian'} target={'_blank'}>
+              <div>
+                {t('For any questions please text me:')}
+                <IconWrapper>
+                  <MyTelegramIcon />
+                </IconWrapper>
+              </div>
+            </ContactTitle>
             <StyledEMail>hareksian23@gmail.com</StyledEMail>
             <StyledForm />
           </Fade>
@@ -49,7 +48,7 @@ const StyledEMail = styled(StyledText)`
   color: ${props => props.theme.colors.textSecondary};
   font-weight: normal;
   font-size: 19px;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
 `
 const MyTelegramIcon = styled(TelegramIcon)`
   position: absolute;
@@ -59,8 +58,7 @@ const MyTelegramIcon = styled(TelegramIcon)`
   color: ${props => props.theme.colors.textSecondary};
 `
 const ContactTitle = styled.a`
-  margin-bottom: 80px;
-
+  margin-bottom: 20px;
   display: flex;
   justify-content: center;
   cursor: pointer;

@@ -21,7 +21,7 @@ export const Skills = () => {
   return (
     <StyledSkillsSection id={i18n.language === 'en' ? 'TECH STACK' : 'НАВЫКИ'}>
       <Container>
-        <SkillTitle>{t('My Tech Stack')}</SkillTitle>
+        <SectionTitle>{t('My Tech Stack')}</SectionTitle>
         <Fade duration={1500}>
           <Wrapper>
             <Skill icon={<TSIcon />} marginTop={'10px'} title={'Type Script'} />
@@ -61,7 +61,4 @@ const Wrapper = styled.div`
     justify-content: space-around;
     column-gap: 40px;
   }
-`
-const SkillTitle = styled(SectionTitle)`
-  margin-bottom: 90px;
 `
