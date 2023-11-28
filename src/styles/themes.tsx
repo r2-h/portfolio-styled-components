@@ -5,7 +5,7 @@ export const darkTheme = {
     button: {
       background: 'rgb(93,93,93)',
       color: `#A7A7A7`,
-      hover: 'rgb(80,80,80)',
+      hover: 'rgb(100,100,100)',
     },
     goToTopButton: 'rgba(25, 25, 25, 0.7)',
     hover: {
@@ -36,7 +36,7 @@ export const lightTheme = {
     button: {
       background: 'rgb(196,196,196)',
       color: 'white',
-      hover: 'rgb(150,150,150)',
+      hover: 'rgb(173,173,173)',
     },
     filter: 'drop-shadow(2px 2px 50px rgba(0, 0, 0, 0.2))',
     goToTopButton: 'rgba(121,121,121,0.7)',
