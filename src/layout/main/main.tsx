@@ -11,24 +11,24 @@ import Typewriter from 'typewriter-effect'
 import myPhoto from '../../assets/my-photo.jpg'
 export const Main = () => {
   return (
-    <StyledMain id={'Home'}>
+    <StyledMain id={'HOME'}>
       <Container>
         <Fade duration={1500}>
           <Wrapper>
             <div>
               <Wrapper2>
-                Hi <WavingHandIcon />,
+                HI <WavingHandIcon />,
               </Wrapper2>
-              <Name>My name is</Name>
+              <Name>MY NAME IS</Name>
               <StyledName>
-                Artur Hareksian<span style={{ visibility: 'hidden' }}>is</span>
+                ARTUR HAREKSIAN<span style={{ visibility: 'hidden' }}>is</span>
               </StyledName>
               <Developer>
                 <Typewriter
                   options={{
                     autoStart: true,
                     loop: true,
-                    strings: ['A web developer'],
+                    strings: ['A WEB DEVELOPER'],
                   }}
                 />
               </Developer>
@@ -56,14 +56,17 @@ const StyledMain = styled.div`
 `
 
 const PhotoWrapper = styled.div`
-  width: 400px;
+  min-width: 400px;
   height: 400px;
   border-radius: 50%;
-  background: linear-gradient(45deg, rgb(81, 92, 171), rgb(118, 94, 164));
+  transition: background 0.1s ease-in-out;
   padding: 5px;
+  &:hover {
+    background: linear-gradient(45deg, rgb(81, 92, 171), rgb(118, 94, 164));
+  }
   @media ${darkTheme.media.mobile} {
-    width: 350px;
-    height: 350px;
+    min-width: 330px;
+    height: 330px;
   }
 `
 const Photo = styled.div`
@@ -77,30 +80,31 @@ const Photo = styled.div`
 `
 
 const Name = styled.h2`
-  ${Font({ Fmax: 50, Fmin: 35 })}
+  ${Font({ Fmax: 48, Fmin: 35 })}
 `
 const Developer = styled.h1`
-  font-size: 58px;
+  ${Font({ Fmax: 48, Fmin: 35 })};
   white-space: nowrap;
-  ${Font({ Fmax: 50, Fmin: 35 })}
 `
 const Wrapper = styled(FlexWrapper)`
   gap: 50px;
   justify-content: space-between;
   flex-wrap: wrap;
+  ${Font({ Fmax: 48, Fmin: 35 })};
   @media screen and (max-width: 1011px) {
     justify-content: center;
+    margin-top: 25px;
   }
 `
 const Wrapper2 = styled.div`
   display: flex;
   align-items: center;
-  ${Font({ Fmax: 50, Fmin: 35 })};
+  ${Font({ Fmax: 48, Fmin: 35 })}
   font-weight: bold;
 `
 const StyledName = styled(StyledText)`
   white-space: nowrap;
-  ${Font({ Fmax: 50, Fmin: 35 })}
+  ${Font({ Fmax: 48, Fmin: 35 })}
 `
 const WavingHandIcon = styled(WavingHand)`
   margin-bottom: 4px;

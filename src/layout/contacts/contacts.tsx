@@ -11,7 +11,7 @@ export const Contacts = () => {
   const { t } = useTranslation()
 
   return (
-    <StyledContacts id={'Contact'}>
+    <StyledContacts id={'CONTACT'}>
       <Container>
         <ContactContainer>
           <SectionTitle>{t('Contact')}</SectionTitle>

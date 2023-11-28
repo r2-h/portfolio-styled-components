@@ -18,7 +18,7 @@ export const Menu: FC<MenuProps> = ({ menuItems }) => {
                 activeClass={'active'}
                 duration={350}
                 isDynamic
-                offset={el === 'Contact' ? 300 : -100}
+                offset={el === 'CONTACT' ? 300 : -100}
                 smooth
                 spy
                 to={el}
@@ -45,7 +45,7 @@ const Ul = styled.ul`
 `
 const List = styled.li``
 const MyLink = styled(Link)`
-  font-size: 18px;
+  font-size: 16px;
   cursor: pointer;
   &:hover {
     color: ${props => props.theme.colors.hover.text};

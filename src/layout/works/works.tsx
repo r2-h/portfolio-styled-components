@@ -10,7 +10,7 @@ import socialImg from '../../assets/social-network.jpg'
 import todoImg from '../../assets/todo.jpg'
 export const Works = () => {
   return (
-    <StyledWorks id={'Projects'}>
+    <StyledWorks id={'PROJECTS'}>
       <Container>
         <SectionTitle>Projects</SectionTitle>
         <SecondaryTitle>Things I’ve built so far</SecondaryTitle>

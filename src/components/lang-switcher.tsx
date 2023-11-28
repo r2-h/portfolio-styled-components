@@ -15,10 +15,12 @@ export const LangSwitcher: FC<LangSwitcherProps> = ({}) => {
 }
 const SwitcherBtn = styled.button`
   cursor: pointer;
-  padding: 11px;
-  margin-top: 5px;
-  font-size: 1.1rem;
-  background-color: ${props => props.theme.colors.navigation};
+  z-index: 3;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  margin-top: 6px;
+  font-size: 1.2rem;
   border-radius: 5px;
   color: ${props => props.theme.colors.textSecondary};
   &:hover {

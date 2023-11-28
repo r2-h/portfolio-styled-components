@@ -118,7 +118,7 @@ const PopUp = styled.nav<{ isOpen: boolean }>`
   left: 0;
   z-index: -1;
   position: fixed;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.93);
   transform: translateY(-100%);
   transition: 0.7s ease-in-out;
   display: flex;

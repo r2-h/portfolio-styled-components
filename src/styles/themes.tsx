@@ -1,6 +1,6 @@
 export const darkTheme = {
   colors: {
-    accent: `#a375ff`,
+    accent: `#b38eff`,
     bGround: '#191919',
     button: {
       background: 'rgb(55,55,55)',
@@ -22,6 +22,7 @@ export const darkTheme = {
   },
   media: {
     mobile: 'screen and (max-width: 576px)',
+    tab: 'screen and (max-width: 1300px)',
   },
 }
 export const lightTheme = {

@@ -4,6 +4,7 @@ import { Container, Menu } from '@/components'
 import { LangSwitcher } from '@/components/lang-switcher'
 import { ToggleThemeBtn } from '@/components/toggle-theme-btn'
 import { MobileMenu } from '@/layout/header/mobile-menu'
+import { darkTheme } from '@/styles'
 import styled from 'styled-components'
 
 type HeaderProps = {
@@ -20,16 +21,16 @@ export const Header = ({ toggleTheme }: HeaderProps) => {
 
     return () => window.removeEventListener('resize', handleWindowResize)
   }, [])
-  const menuItems = ['Home', 'Tech stack', 'Projects', 'Contact']
+  const menuItems = ['HOME', 'TECH STACK', 'PROJECTS', 'CONTACT']
 
   return (
     <StyledHeader>
       <Container>
+        <Wrapper2>
+          <ToggleThemeBtn toggleTheme={toggleTheme} />
+          <LangSwitcher />
+        </Wrapper2>
         <Wrapper>
-          <Wrapper2>
-            <ToggleThemeBtn toggleTheme={toggleTheme} />
-            <LangSwitcher />
-          </Wrapper2>
           {width > breakpoint && <Menu menuItems={menuItems} />}
           {width < breakpoint && <MobileMenu menuItems={menuItems} />}
         </Wrapper>
@@ -39,20 +40,28 @@ export const Header = ({ toggleTheme }: HeaderProps) => {
 }
 
 const StyledHeader = styled.div`
-  position: fixed;
-  z-index: 9999;
-  top: 0;
-  right: 0;
-  left: 0;
+  background-color: ${props => props.theme.colors.bGround};
 `
 
 const Wrapper = styled.div`
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: end;
+  padding-top: 5px;
+  position: fixed;
+  z-index: 222;
+  top: 0;
+  right: 22%;
+  left: 20%;
+
+  @media ${darkTheme.media.tab} {
+    right: 6%;
+  }
 `
 const Wrapper2 = styled.div`
   display: flex;
   align-items: center;
   gap: 25px;
+  @media ${darkTheme.media.mobile} {
+    padding-top: 15px;
+  }
 `

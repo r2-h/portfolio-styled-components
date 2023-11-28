@@ -15,18 +15,22 @@ export const ToggleThemeBtn: FC<ToggleThemeBtnProps> = ({ toggleTheme }) => {
 }
 const ToggleBtn = styled.button`
   cursor: pointer;
-  padding: 5px;
+  z-index: 3;
+  position: relative;
+  width: 40px;
+  height: 40px;
   margin-top: 5px;
   display: flex;
-  background-color: ${props => props.theme.colors.navigation};
+  align-items: center;
+  justify-content: center;
   border-radius: 5px;
   &:hover {
     background-color: ${props => props.theme.colors.hover.navigation};
   }
 `
 const StyledThemeIcon = styled(ThemeIcon)`
-  width: 31px;
-  height: 31px;
+  width: 27px;
+  height: 27px;
   path {
     fill: ${props => props.theme.colors.textSecondary};
   }

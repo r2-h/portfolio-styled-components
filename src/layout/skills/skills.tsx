@@ -17,7 +17,7 @@ import styled from 'styled-components'
 
 export const Skills = () => {
   return (
-    <StyledSkillsSection id={'Tech stack'}>
+    <StyledSkillsSection id={'TECH STACK'}>
       <Container>
         <SectionTitle>My Tech Stack</SectionTitle>
         <SecondaryTitle>Technologies I’ve been working with recently</SecondaryTitle>
