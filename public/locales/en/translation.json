@@ -16,20 +16,17 @@
   "PROJECTS": "PROJECTS",
   "CONTACT": "CONTACT",
   "My Tech Stack": "My Tech Stack",
-  "Technologies I’ve been working with recently": "Technologies I’ve been working with recently",
   "Projects": "Projects",
-  "Things I’ve built so far": "Things I’ve built so far",
-  "Приложение, которое позволяет создавать и изучать карточки с вопросами и ответами": {
-    " Также позволяет делиться своими наборами карточек с другими пользователями": {
-      "": "Приложение, которое позволяет создавать и изучать карточки с вопросами и ответами. Также позволяет делиться своими наборами карточек с другими пользователями."
+  "© 2023 Artur Hareksian": "© 2023 Artur Hareksian",
+  "An application that allows you to create and study question and answer cards. It also allows you to share your sets of cards with other users.": "An application that allows you to create and study question and answer cards. It also allows you to share your sets of cards with other users.",
+  "An application for task management": {
+    " Allows you to add, edit, mark tasks, as well as sort and prioritize them": {
+      "": "An application for task management. Allows you to add, edit, mark tasks, as well as sort and prioritize them."
     }
   },
-  "Приложение для управления задачами": {
-    " Позволяет добавлять, редактировать, отмечать задачи, а также сортировать и устанавливать приоритеты": "Приложение для управления задачами. Позволяет добавлять, редактировать, отмечать задачи, а также сортировать и устанавливать приоритеты"
-  },
-  "Разработка социальной сети": {
-    " Пользователи могут создавать аккаунты, добавлять друзей и обмениваться сообщениями": {
-      "": "Разработка социальной сети. Пользователи могут создавать аккаунты, добавлять друзей и обмениваться сообщениями."
+  "Developing a social network": {
+    " Users can create accounts, add friends and exchange messages": {
+      "": "Developing a social network. Users can create accounts, add friends and exchange messages."
     }
   }
 }

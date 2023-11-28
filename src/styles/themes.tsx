@@ -7,7 +7,6 @@ export const darkTheme = {
       color: `#A7A7A7`,
       hover: 'rgb(80,80,80)',
     },
-    eMail: 'linear-gradient(45deg, rgb(81, 92, 171), rgb(118, 94, 164))',
     goToTopButton: 'rgba(25, 25, 25, 0.7)',
     hover: {
       navigation: 'rgba(49,49,49,0.8)',
@@ -15,6 +14,7 @@ export const darkTheme = {
     },
     line: 'rgba(66,68,110,0.8)',
     link: `#FFF`,
+    name: 'linear-gradient(45deg, rgb(134, 147, 253), rgb(180, 147, 255))',
     navigation: 'rgba(25,25,25,0.8)',
     popUp: {
       background: 'rgba(12,12,12,0.95)',
@@ -38,7 +38,6 @@ export const lightTheme = {
       color: 'white',
       hover: 'rgb(150,150,150)',
     },
-    eMail: `#666666`,
     filter: 'drop-shadow(2px 2px 50px rgba(0, 0, 0, 0.2))',
     goToTopButton: 'rgba(121,121,121,0.7)',
     hover: {
@@ -47,6 +46,7 @@ export const lightTheme = {
     },
     line: 'rgba(121,121,121,0.7)',
     link: `#000000`,
+    name: '#42446E',
     navigation: 'rgba(245,245,245,0.8)',
     popUp: {
       background: 'rgba(94,94,94,0.99)',

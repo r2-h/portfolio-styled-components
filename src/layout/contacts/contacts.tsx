@@ -4,14 +4,13 @@ import { useTranslation } from 'react-i18next'
 import { TelegramIcon } from '@/assets/telegram'
 import { Container, SectionTitle, StyledText } from '@/components'
 import { StyledForm } from '@/layout/contacts/styled-form'
-import { Font } from '@/styles/common'
 import styled from 'styled-components'
 
 export const Contacts = () => {
-  const { t } = useTranslation()
+  const { i18n, t } = useTranslation()
 
   return (
-    <StyledContacts id={'CONTACT'}>
+    <StyledContacts id={i18n.language === 'en' ? 'CONTACT' : 'КОНТАКТЫ'}>
       <Container>
         <ContactContainer>
           <SectionTitle>{t('Contact')}</SectionTitle>
@@ -26,7 +25,7 @@ export const Contacts = () => {
           </ContactTitle>
 
           <Fade duration={1500}>
-            <StyledEMail>r2mail1122@gmail.com</StyledEMail>
+            <StyledEMail>hareksian23@gmail.com</StyledEMail>
             <StyledForm />
           </Fade>
         </ContactContainer>
@@ -47,14 +46,16 @@ const StyledContacts = styled.div`
 const StyledEMail = styled(StyledText)`
   display: flex;
   justify-content: center;
-  color: ${props => props.theme.colors.eMail};
+  color: ${props => props.theme.colors.textSecondary};
   font-weight: normal;
-  ${Font({ Fmax: 28, Fmin: 24 })};
+  font-size: 19px;
+  margin-bottom: 16px;
 `
 const MyTelegramIcon = styled(TelegramIcon)`
   position: absolute;
-  min-height: 40px;
-  min-width: 40px;
+  margin-top: 1px;
+  min-height: 26px;
+  min-width: 26px;
   color: ${props => props.theme.colors.textSecondary};
 `
 const ContactTitle = styled.a`
@@ -64,7 +65,7 @@ const ContactTitle = styled.a`
   justify-content: center;
   cursor: pointer;
   color: ${props => props.theme.colors.textSecondary};
-  font-size: 32px;
+  font-size: 22px;
 
   @media screen and (max-width: 860px) {
     margin-left: 0;

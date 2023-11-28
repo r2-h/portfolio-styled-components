@@ -15,8 +15,7 @@ export const ToggleThemeBtn: FC<ToggleThemeBtnProps> = ({ toggleTheme }) => {
 }
 const ToggleBtn = styled.button`
   cursor: pointer;
-  z-index: 3;
-  position: relative;
+
   width: 40px;
   height: 40px;
   margin-top: 5px;

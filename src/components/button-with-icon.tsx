@@ -21,11 +21,11 @@ const Button = styled.button`
   justify-content: center;
   gap: 8px;
   align-items: center;
-  font-size: 22px;
+  font-size: 19px;
   color: ${props => props.theme.colors.button.color};
   background-color: ${props => props.theme.colors.button.background};
   height: 45px;
-  width: 265px;
+  width: 200px;
   border-radius: 3px;
   cursor: pointer;
 

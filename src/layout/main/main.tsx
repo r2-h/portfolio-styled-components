@@ -11,10 +11,10 @@ import Typewriter from 'typewriter-effect'
 
 import myPhoto from '../../assets/my-photo.jpg'
 export const Main = () => {
-  const { t } = useTranslation()
+  const { i18n, t } = useTranslation()
 
   return (
-    <StyledMain id={'HOME'}>
+    <StyledMain id={i18n.language === 'en' ? 'HOME' : 'ГЛАВНАЯ'}>
       <Container>
         <Fade duration={1500}>
           <Wrapper>
@@ -65,10 +65,7 @@ const PhotoWrapper = styled.div`
   border-radius: 50%;
   transition: background 0.4s ease-in-out;
   padding: 4px;
-  &:hover {
-    //background: linear-gradient(45deg, rgb(81, 92, 171), rgb(118, 94, 164));
-    background-color: rgb(118, 94, 164);
-  }
+
   @media ${darkTheme.media.mobile} {
     min-width: 330px;
     height: 330px;
@@ -110,7 +107,6 @@ const Wrapper2 = styled.div`
 `
 const StyledName = styled(StyledText)`
   white-space: nowrap;
-
   ${Font({ Fmax: 48, Fmin: 35 })}
 `
 const WavingHandIcon = styled(WavingHand)`

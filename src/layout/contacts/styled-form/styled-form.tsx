@@ -47,11 +47,11 @@ export const StyledForm = () => {
 }
 
 const Form = styled.form`
-  max-width: 500px;
+  max-width: 450px;
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 15px;
   margin: 14px auto 0;
   align-items: center;
 

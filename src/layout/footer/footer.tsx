@@ -10,7 +10,7 @@ export const Footer = () => {
     <StyledFooter>
       <Container>
         <Wrapper>
-          <span>{t('© 2023 Артур Харексян.')}</span>
+          <span>{t('© 2023 Artur Hareksian')}</span>
           <GoTopButton />
         </Wrapper>
       </Container>

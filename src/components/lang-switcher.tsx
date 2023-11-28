@@ -15,8 +15,7 @@ export const LangSwitcher: FC<LangSwitcherProps> = ({}) => {
 }
 const SwitcherBtn = styled.button`
   cursor: pointer;
-  z-index: 123;
-  position: relative;
+
   width: 40px;
   height: 40px;
   margin-top: 6px;

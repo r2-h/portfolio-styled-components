@@ -2,7 +2,6 @@ import { Fade } from 'react-awesome-reveal'
 import { useTranslation } from 'react-i18next'
 
 import { Container, SectionTitle } from '@/components'
-import { SecondaryTitle } from '@/components/secondary-title'
 import { Work } from '@/layout/works/work/work'
 import styled from 'styled-components'
 
@@ -10,20 +9,19 @@ import flashcardsImg from '../../assets/flashcards.jpg'
 import socialImg from '../../assets/social-network.jpg'
 import todoImg from '../../assets/todo.jpg'
 export const Works = () => {
-  const { t } = useTranslation()
+  const { i18n, t } = useTranslation()
 
   return (
-    <StyledWorks id={'PROJECTS'}>
+    <StyledWorks id={i18n.language === 'en' ? 'PROJECTS' : 'ПРОЕКТЫ'}>
       <Container>
-        <SectionTitle>{t('Projects')}</SectionTitle>
-        <SecondaryTitle>{t('Things I’ve built so far')}</SecondaryTitle>
+        <WorksTitle>{t('Projects')}</WorksTitle>
         <Wrapper>
           <Fade duration={1500}>
             <Work
               codeLink={'https://github.com/r2adler/it-inc-cards'}
               demoLink={'https://it-inc-cards.vercel.app/'}
               description={t(
-                'Приложение, которое позволяет создавать и изучать карточки с вопросами и ответами. Также позволяет делиться своими наборами карточек с другими пользователями.'
+                'An application that allows you to create and study question and answer cards. It also allows you to share your sets of cards with other users.'
               )}
               img={flashcardsImg}
               imgTitle={'Flashcards image'}
@@ -34,7 +32,7 @@ export const Works = () => {
               codeLink={'https://github.com/r2adler/toDoList'}
               demoLink={'https://r2adler.github.io/toDoList'}
               description={t(
-                `Приложение для управления задачами. Позволяет добавлять, редактировать, отмечать задачи, а также сортировать и устанавливать приоритеты`
+                `An application for task management. Allows you to add, edit, mark tasks, as well as sort and prioritize them.`
               )}
               img={todoImg}
               imgTitle={'Todolist image'}
@@ -45,7 +43,7 @@ export const Works = () => {
               codeLink={'https://github.com/r2adler/socialNetwork'}
               demoLink={'https://r2adler.github.io/socialNetwork'}
               description={t(
-                `Разработка социальной сети. Пользователи могут создавать аккаунты, добавлять друзей и обмениваться сообщениями.`
+                `Developing a social network. Users can create accounts, add friends and exchange messages.`
               )}
               img={socialImg}
               imgTitle={'Social network image'}
@@ -72,4 +70,7 @@ const Wrapper = styled.div`
   @media screen and (max-width: 1429px) {
     justify-content: center;
   }
+`
+const WorksTitle = styled(SectionTitle)`
+  margin-bottom: 90px;
 `

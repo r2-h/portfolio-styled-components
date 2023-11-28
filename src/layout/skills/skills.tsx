@@ -12,18 +12,16 @@ import { StorybookIcon } from '@/assets/storybook'
 import { StyledComponentsIcon } from '@/assets/styled-components'
 import { TSIcon } from '@/assets/ts'
 import { Container, SectionTitle } from '@/components'
-import { SecondaryTitle } from '@/components/secondary-title'
 import { Skill } from '@/layout/skills/skill'
 import styled from 'styled-components'
 
 export const Skills = () => {
-  const { t } = useTranslation()
+  const { i18n, t } = useTranslation()
 
   return (
-    <StyledSkillsSection id={'TECH STACK'}>
+    <StyledSkillsSection id={i18n.language === 'en' ? 'TECH STACK' : 'НАВЫКИ'}>
       <Container>
-        <SectionTitle>{t('My Tech Stack')}</SectionTitle>
-        <SecondaryTitle>{t('Technologies I’ve been working with recently')}</SecondaryTitle>
+        <SkillTitle>{t('My Tech Stack')}</SkillTitle>
         <Fade duration={1500}>
           <Wrapper>
             <Skill icon={<TSIcon />} marginTop={'10px'} title={'Type Script'} />
@@ -63,4 +61,7 @@ const Wrapper = styled.div`
     justify-content: space-around;
     column-gap: 40px;
   }
+`
+const SkillTitle = styled(SectionTitle)`
+  margin-bottom: 90px;
 `
