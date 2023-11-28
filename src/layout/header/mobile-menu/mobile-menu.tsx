@@ -118,9 +118,9 @@ const PopUp = styled.nav<{ isOpen: boolean }>`
   left: 0;
   z-index: -1;
   position: fixed;
-  background-color: rgba(0, 0, 0, 0.93);
+  background-color: ${props => props.theme.colors.popUp.background};
   transform: translateY(-100%);
-  transition: 0.7s ease-in-out;
+  transition: 0.6s ease-in-out;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -131,7 +131,7 @@ const PopUp = styled.nav<{ isOpen: boolean }>`
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    transition: 0.4s ease-in-out;
+    transition: 0.5s;
   }
   ${props =>
     props.isOpen &&

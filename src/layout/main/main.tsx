@@ -59,10 +59,11 @@ const PhotoWrapper = styled.div`
   min-width: 400px;
   height: 400px;
   border-radius: 50%;
-  transition: background 0.1s ease-in-out;
-  padding: 5px;
+  transition: background 0.4s ease-in-out;
+  padding: 4px;
   &:hover {
-    background: linear-gradient(45deg, rgb(81, 92, 171), rgb(118, 94, 164));
+    //background: linear-gradient(45deg, rgb(81, 92, 171), rgb(118, 94, 164));
+    background-color: rgb(118, 94, 164);
   }
   @media ${darkTheme.media.mobile} {
     min-width: 330px;

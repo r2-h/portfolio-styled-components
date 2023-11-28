@@ -56,7 +56,7 @@ const StyledWorks = styled.div`
 const Wrapper = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 40px;
 

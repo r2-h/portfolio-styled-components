@@ -19,12 +19,12 @@ export const SplitedText: FC<SplitedTextProps> = ({ children }) => (
 )
 const Half = styled.span`
   overflow-y: hidden;
-  height: 49%;
+  height: 48%;
   position: absolute;
   top: 3px;
   left: 0;
   display: inline-block;
-  color: ${darkTheme.colors.accent};
+  color: ${props => props.theme.colors.popUp.color};
   transition: 0.1s ease-in-out;
 
   & + & {
@@ -32,7 +32,7 @@ const Half = styled.span`
 
     span {
       display: inline-block;
-      transform: translateY(-50%);
+      transform: translateY(-47%);
     }
   }
 `

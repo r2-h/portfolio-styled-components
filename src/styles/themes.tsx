@@ -16,6 +16,10 @@ export const darkTheme = {
     line: 'rgba(66,68,110,0.8)',
     link: `#FFF`,
     navigation: 'rgba(25,25,25,0.8)',
+    popUp: {
+      background: 'rgba(12,12,12,0.95)',
+      color: `#b38eff`,
+    },
     project: `#363636`,
     text: `#CCCCCC`,
     textSecondary: `#A7A7A7`,
@@ -44,6 +48,10 @@ export const lightTheme = {
     line: 'rgba(121,121,121,0.7)',
     link: `#000000`,
     navigation: 'rgba(245,245,245,0.8)',
+    popUp: {
+      background: 'rgba(94,94,94,0.99)',
+      color: `#ffffff`,
+    },
     project: `#FFF`,
     text: `#42446E`,
     textSecondary: `#666666`,
