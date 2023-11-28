@@ -37,17 +37,17 @@ const StyledGoTopButton = styled.button`
   position: fixed;
   z-index: 100;
   bottom: 18px;
-  right: 340px;
+  right: 20%;
   path {
     fill: ${props => props.theme.colors.textSecondary};
   }
   &:hover {
     background-color: ${props => props.theme.colors.hover.navigation};
   }
-  @media screen and (max-width: 1300px) {
-    right: 100px;
+  @media screen and (max-width: 1400px) {
+    right: 10%;
   }
   @media ${darkTheme.media.mobile} {
-    right: 39px;
+    right: 31px;
   }
 `
