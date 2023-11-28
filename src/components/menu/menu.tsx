@@ -12,21 +12,19 @@ export const Menu: FC<MenuProps> = ({ menuItems }) => {
     <StyledMenu>
       <Ul>
         {menuItems.map((el, i) => (
-          <>
-            <List key={i}>
-              <MyLink
-                activeClass={'active'}
-                duration={350}
-                isDynamic
-                offset={el === 'CONTACT' ? -70 : -100}
-                smooth
-                spy
-                to={el}
-              >
-                {el}
-              </MyLink>
-            </List>
-          </>
+          <List key={i}>
+            <MyLink
+              activeClass={'active'}
+              duration={350}
+              isDynamic
+              offset={el === 'CONTACT' ? -70 : -100}
+              smooth
+              spy
+              to={el}
+            >
+              {el}
+            </MyLink>
+          </List>
         ))}
       </Ul>
     </StyledMenu>
