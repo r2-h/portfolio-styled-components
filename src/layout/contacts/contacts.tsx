@@ -36,8 +36,8 @@ export const Contacts = () => {
 }
 
 const StyledContacts = styled.div`
-  padding-bottom: 280px;
-  padding-top: 480px;
+  padding-bottom: 175px;
+  padding-top: 175px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -49,7 +49,7 @@ const StyledEMail = styled(StyledText)`
   justify-content: center;
   color: ${props => props.theme.colors.eMail};
   font-weight: normal;
-  ${Font({ Fmax: 30, Fmin: 28 })};
+  ${Font({ Fmax: 28, Fmin: 24 })};
 `
 const MyTelegramIcon = styled(TelegramIcon)`
   position: absolute;

@@ -80,7 +80,7 @@ const Photo = styled.div`
 `
 
 const Name = styled.h2`
-  ${Font({ Fmax: 48, Fmin: 35 })}
+  ${Font({ Fmax: 48, Fmin: 35 })};
 `
 const Developer = styled.h1`
   ${Font({ Fmax: 48, Fmin: 35 })};
@@ -93,17 +93,19 @@ const Wrapper = styled(FlexWrapper)`
   ${Font({ Fmax: 48, Fmin: 35 })};
   @media screen and (max-width: 1011px) {
     justify-content: center;
-    margin-top: 25px;
+    line-height: 3rem;
   }
 `
 const Wrapper2 = styled.div`
   display: flex;
+  line-height: 3rem;
   align-items: center;
   ${Font({ Fmax: 48, Fmin: 35 })}
   font-weight: bold;
 `
 const StyledName = styled(StyledText)`
   white-space: nowrap;
+
   ${Font({ Fmax: 48, Fmin: 35 })}
 `
 const WavingHandIcon = styled(WavingHand)`

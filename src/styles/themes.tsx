@@ -3,9 +3,9 @@ export const darkTheme = {
     accent: `#b38eff`,
     bGround: '#191919',
     button: {
-      background: 'rgb(55,55,55)',
+      background: 'rgb(93,93,93)',
       color: `#A7A7A7`,
-      hover: 'rgb(44,44,44)',
+      hover: 'rgb(80,80,80)',
     },
     eMail: 'linear-gradient(45deg, rgb(81, 92, 171), rgb(118, 94, 164))',
     goToTopButton: 'rgba(25, 25, 25, 0.7)',
@@ -30,7 +30,7 @@ export const lightTheme = {
     accent: `#884eff`,
     bGround: '#f5f5f5',
     button: {
-      background: 'rgb(185,185,185)',
+      background: 'rgb(196,196,196)',
       color: 'white',
       hover: 'rgb(150,150,150)',
     },

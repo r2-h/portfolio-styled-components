@@ -65,7 +65,7 @@ const Field = styled.input`
   background-color: ${props => props.theme.colors.project};
   color: ${props => props.theme.colors.text};
   border: none;
-  height: 30px;
+  height: 35px;
   padding: 5px 15px;
   font-family: 'Poppins', sans-serif;
   font-size: 14px;
