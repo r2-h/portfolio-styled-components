@@ -17,7 +17,7 @@ export const darkTheme = {
     name: 'linear-gradient(45deg, rgb(134, 147, 253), rgb(180, 147, 255))',
     navigation: 'rgba(25,25,25,0.8)',
     popUp: {
-      background: 'rgba(12,12,12,0.95)',
+      background: 'rgba(12,12,12,0.98)',
       color: `#b38eff`,
     },
     project: `#363636`,

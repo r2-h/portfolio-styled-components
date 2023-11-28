@@ -25,7 +25,9 @@ export const Main = () => {
               <Name>{t('MY NAME IS')}</Name>
               <StyledName>
                 {t('ARTUR HAREKSIAN')}
-                <span style={{ visibility: 'hidden' }}>is</span>
+                <span style={{ visibility: 'hidden' }}>
+                  {i18n.language === 'en' ? 'i' : 'iiui'}
+                </span>
               </StyledName>
               <Developer>
                 <Typewriter

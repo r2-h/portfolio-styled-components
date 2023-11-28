@@ -1,7 +1,6 @@
 import { FC, useState } from 'react'
 import { Link } from 'react-scroll'
 
-import { SplitedText } from '@/components'
 import { darkTheme } from '@/styles'
 import styled, { css } from 'styled-components'
 
@@ -29,7 +28,7 @@ export const MobileMenu: FC<MobileMenuProps> = ({ menuItems }) => {
                 spy
                 to={el}
               >
-                <SplitedText>{el}</SplitedText>
+                <Navigation>{el}</Navigation>
               </StyledLink>
             </li>
           ))}
@@ -144,4 +143,9 @@ const PopUp = styled.nav<{ isOpen: boolean }>`
 `
 const StyledLink = styled(Link)`
   cursor: pointer;
+`
+const Navigation = styled.h2`
+  font-size: 2.5rem;
+  color: ${props => props.theme.colors.popUp.color};
+  font-weight: normal;
 `
