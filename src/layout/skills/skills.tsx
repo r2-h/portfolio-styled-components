@@ -1,4 +1,5 @@
 import { Fade } from 'react-awesome-reveal'
+import { useTranslation } from 'react-i18next'
 
 import { CSSIcon } from '@/assets/css'
 import { HTMLIcon } from '@/assets/html'
@@ -16,11 +17,13 @@ import { Skill } from '@/layout/skills/skill'
 import styled from 'styled-components'
 
 export const Skills = () => {
+  const { t } = useTranslation()
+
   return (
     <StyledSkillsSection id={'TECH STACK'}>
       <Container>
-        <SectionTitle>My Tech Stack</SectionTitle>
-        <SecondaryTitle>Technologies I’ve been working with recently</SecondaryTitle>
+        <SectionTitle>{t('My Tech Stack')}</SectionTitle>
+        <SecondaryTitle>{t('Technologies I’ve been working with recently')}</SecondaryTitle>
         <Fade duration={1500}>
           <Wrapper>
             <Skill icon={<TSIcon />} marginTop={'10px'} title={'Type Script'} />

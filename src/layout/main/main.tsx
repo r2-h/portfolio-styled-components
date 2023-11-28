@@ -1,4 +1,5 @@
 import { Fade } from 'react-awesome-reveal'
+import { useTranslation } from 'react-i18next'
 
 import { WavingHand } from '@/assets/waving-hand'
 import { Container, FlexWrapper } from '@/components'
@@ -10,6 +11,8 @@ import Typewriter from 'typewriter-effect'
 
 import myPhoto from '../../assets/my-photo.jpg'
 export const Main = () => {
+  const { t } = useTranslation()
+
   return (
     <StyledMain id={'HOME'}>
       <Container>
@@ -17,18 +20,19 @@ export const Main = () => {
           <Wrapper>
             <div>
               <Wrapper2>
-                HI <WavingHandIcon />,
+                {t('HI')} <WavingHandIcon />,
               </Wrapper2>
-              <Name>MY NAME IS</Name>
+              <Name>{t('MY NAME IS')}</Name>
               <StyledName>
-                ARTUR HAREKSIAN<span style={{ visibility: 'hidden' }}>is</span>
+                {t('ARTUR HAREKSIAN')}
+                <span style={{ visibility: 'hidden' }}>is</span>
               </StyledName>
               <Developer>
                 <Typewriter
                   options={{
                     autoStart: true,
                     loop: true,
-                    strings: ['A WEB DEVELOPER'],
+                    strings: t('A WEB DEVELOPER'),
                   }}
                 />
               </Developer>

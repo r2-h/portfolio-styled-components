@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 
 import { Container, Menu } from '@/components'
 import { LangSwitcher } from '@/components/lang-switcher'
@@ -11,6 +12,7 @@ type HeaderProps = {
   toggleTheme: () => void
 }
 export const Header = ({ toggleTheme }: HeaderProps) => {
+  const { t } = useTranslation()
   const [width, setWidth] = useState(window.innerWidth)
   const breakpoint = 768
 
@@ -21,7 +23,7 @@ export const Header = ({ toggleTheme }: HeaderProps) => {
 
     return () => window.removeEventListener('resize', handleWindowResize)
   }, [])
-  const menuItems = ['HOME', 'TECH STACK', 'PROJECTS', 'CONTACT']
+  const menuItems = [t('HOME'), t('TECH STACK'), t('PROJECTS'), t('CONTACT')]
 
   return (
     <StyledHeader>
@@ -48,10 +50,10 @@ const Wrapper = styled.div`
   justify-content: end;
   padding-top: 5px;
   position: fixed;
-  z-index: 222;
+  z-index: 3;
   top: 0;
   right: 22%;
-  left: 20%;
+  left: 30%;
 
   @media ${darkTheme.media.tab} {
     right: 6%;
