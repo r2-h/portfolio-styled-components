@@ -32,7 +32,7 @@ const Half = styled.span`
 
     span {
       display: inline-block;
-      transform: translateY(-49%);
+      transform: translateY(-50%);
     }
   }
 `
