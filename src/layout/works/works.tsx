@@ -26,7 +26,7 @@ export const Works = () => {
               img={flashcardsImg}
               imgTitle={'Flashcards image'}
               techStack={'TypeScript, React, Radix, RTK Query, Storybook,  React Hook Form'}
-              title={'Flashcards'}
+              title={'Learning platform'}
             />
             <Work
               codeLink={'https://github.com/r2adler/toDoList'}
@@ -37,7 +37,7 @@ export const Works = () => {
               img={todoImg}
               imgTitle={'Todolist image'}
               techStack={'TypeScript, REACT,  RTK, Formik'}
-              title={'Todolist'}
+              title={'Task tracker'}
             />
             <Work
               codeLink={'https://github.com/r2adler/socialNetwork'}
@@ -48,7 +48,7 @@ export const Works = () => {
               img={socialImg}
               imgTitle={'Social network image'}
               techStack={'TypeScript, React,  RTK, Storybook, Formik'}
-              title={'Social network'}
+              title={'Communication platform'}
             />
           </Fade>
         </Wrapper>
