@@ -9,7 +9,7 @@ import { Font } from '@/styles/common'
 import styled from 'styled-components'
 import Typewriter from 'typewriter-effect'
 
-import myPhoto from '../../assets/my-photo.jpg'
+import myPhoto from '../../assets/images/my-photo.jpg'
 export const Main = () => {
   const { i18n, t } = useTranslation()
 
