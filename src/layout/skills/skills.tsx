@@ -7,9 +7,9 @@ import { NextIcon } from '@/assets/next'
 import { ReactIcon } from '@/assets/react'
 import { ReactHookFormIcon } from '@/assets/react-hook-form'
 import { ReduxIcon } from '@/assets/redux'
-import { SCSSIcon } from '@/assets/scss'
 import { StorybookIcon } from '@/assets/storybook'
 import { StyledComponentsIcon } from '@/assets/styled-components'
+import { TailwindIcon } from '@/assets/tailwind-icon'
 import { TSIcon } from '@/assets/ts'
 import { Container, SectionTitle } from '@/components'
 import { Skill } from '@/layout/skills/skill'
@@ -30,8 +30,8 @@ export const Skills = () => {
             <Skill icon={<HTMLIcon />} marginTop={'7px'} title={'HTML'} />
             <Skill icon={<CSSIcon />} marginTop={'7px'} title={'CSS'} />
             <Skill icon={<ReduxIcon />} title={'Redux'} />
-            <Skill icon={<SCSSIcon />} title={'SCSS'} />
             <Skill icon={<StorybookIcon />} marginTop={'-10px'} title={'Storybook'} />
+            <Skill icon={<TailwindIcon />} title={'Tailwind'} />
             <Skill icon={<StyledComponentsIcon />} marginTop={'11px'} title={'Styled Components'} />
             <Skill icon={<ReactHookFormIcon />} marginTop={'8px'} title={'React Hook Form'} />
           </Wrapper>
