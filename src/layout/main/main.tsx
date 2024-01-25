@@ -62,8 +62,8 @@ const StyledMain = styled.div`
 `
 
 const PhotoWrapper = styled.div`
-  min-width: 400px;
-  height: 400px;
+  min-width: 340px;
+  height: 340px;
   border-radius: 50%;
   transition: background 0.4s ease-in-out;
   padding: 4px;
@@ -84,17 +84,17 @@ const Photo = styled.div`
 `
 
 const Name = styled.h2`
-  ${Font({ Fmax: 48, Fmin: 35 })};
+  ${Font({ Fmax: 45, Fmin: 33 })};
 `
 const Developer = styled.h1`
-  ${Font({ Fmax: 48, Fmin: 35 })};
+  ${Font({ Fmax: 45, Fmin: 33 })};
   white-space: nowrap;
 `
 const Wrapper = styled(FlexWrapper)`
   gap: 50px;
   justify-content: space-between;
   flex-wrap: wrap;
-  ${Font({ Fmax: 48, Fmin: 35 })};
+  ${Font({ Fmax: 45, Fmin: 33 })};
   @media screen and (max-width: 1011px) {
     justify-content: center;
     line-height: 3rem;
@@ -104,12 +104,12 @@ const Wrapper2 = styled.div`
   display: flex;
   line-height: 3rem;
   align-items: center;
-  ${Font({ Fmax: 48, Fmin: 35 })}
+  ${Font({ Fmax: 45, Fmin: 33 })}
   font-weight: bold;
 `
 const StyledName = styled(StyledText)`
   white-space: nowrap;
-  ${Font({ Fmax: 48, Fmin: 35 })}
+  ${Font({ Fmax: 45, Fmin: 33 })}
 `
 const WavingHandIcon = styled(WavingHand)`
   margin-bottom: 4px;
