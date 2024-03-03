@@ -40,14 +40,14 @@ export const Works = () => {
               title={'Task tracker'}
             />
             <Work
-              codeLink={'https://github.com/r2adler/socialNetwork'}
-              demoLink={'https://r2adler.github.io/socialNetwork'}
+              codeLink={'https://github.com/inc-kebab/inctagram'}
+              demoLink={'https://inctagram.fun/'}
               description={t(
                 `Developing a social network. Users can create accounts, add friends and exchange messages.`
               )}
               img={socialImg}
               imgTitle={'Social network image'}
-              techStack={'TypeScript, React,  RTK, Storybook, Formik'}
+              techStack={'TypeScript, React,  RTKQuery, Storybook, React Hook Form'}
               title={'Communication platform'}
             />
           </Fade>
