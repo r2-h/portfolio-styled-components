@@ -5,7 +5,7 @@ import styled from 'styled-components'
 
 type WorkProps = {
   codeLink: string
-  demoLink: string
+  demoLink?: string
   description: string
   img: string
   imgTitle: string

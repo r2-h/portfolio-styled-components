@@ -18,6 +18,17 @@ export const Works = () => {
         <Wrapper>
           <Fade duration={1500}>
             <Work
+              codeLink={'https://github.com/inc-kebab/inctagram'}
+              demoLink={'https://inctagram.fun/'}
+              description={t(
+                `Developing a social network. Users can create accounts, add friends and exchange messages.`
+              )}
+              img={socialImg}
+              imgTitle={'Social network image'}
+              techStack={'TypeScript, React,  RTKQuery, Storybook, React Hook Form'}
+              title={'Communication platform'}
+            />
+            <Work
               codeLink={'https://github.com/r2adler/it-inc-cards'}
               demoLink={'https://it-inc-cards.vercel.app/'}
               description={t(
@@ -30,7 +41,6 @@ export const Works = () => {
             />
             <Work
               codeLink={'https://github.com/r2adler/toDoList'}
-              demoLink={'https://r2adler.github.io/toDoList'}
               description={t(
                 `An application for task management. Allows you to add, edit, mark tasks, as well as sort and prioritize them.`
               )}
@@ -38,17 +48,6 @@ export const Works = () => {
               imgTitle={'Todolist image'}
               techStack={'TypeScript, REACT,  RTK, Formik'}
               title={'Task tracker'}
-            />
-            <Work
-              codeLink={'https://github.com/inc-kebab/inctagram'}
-              demoLink={'https://inctagram.fun/'}
-              description={t(
-                `Developing a social network. Users can create accounts, add friends and exchange messages.`
-              )}
-              img={socialImg}
-              imgTitle={'Social network image'}
-              techStack={'TypeScript, React,  RTKQuery, Storybook, React Hook Form'}
-              title={'Communication platform'}
             />
           </Fade>
         </Wrapper>
