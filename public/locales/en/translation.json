@@ -23,9 +23,5 @@
       "": "An application for task management. Allows you to add, edit, mark tasks, as well as sort and prioritize them."
     }
   },
-  "Developing a social network": {
-    " Users can create accounts, add friends and exchange messages": {
-      "": "Developing a social network. Users can create accounts, add friends and exchange messages."
-    }
-  }
+  "Developing a social network": "An application that allows you to create and study question and answer cards. It also allows you to share your sets of cards with other users."
 }

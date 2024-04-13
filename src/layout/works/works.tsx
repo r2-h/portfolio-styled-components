@@ -20,12 +20,10 @@ export const Works = () => {
             <Work
               codeLink={'https://github.com/inc-kebab/inctagram'}
               demoLink={'https://inctagram.fun/'}
-              description={t(
-                `Developing a social network. Users can create accounts, add friends and exchange messages.`
-              )}
+              description={t('Developing a social network')}
               img={socialImg}
               imgTitle={'Social network image'}
-              techStack={'TypeScript, React,  RTKQuery, Storybook, React Hook Form'}
+              techStack={'TypeScript, React, NextJS, RTKQuery, Storybook, Radix, React Hook Form'}
               title={'Communication platform'}
             />
             <Work

@@ -29,10 +29,12 @@ export const Work: FC<WorkProps> = ({
         <Text>{description}</Text>
         <TechStack>Tech stack: {techStack}</TechStack>
         <LinkWrapper>
-          <Link href={demoLink} target={'_blank'}>
-            <StyledLinkIcon />
-            demo
-          </Link>
+          {demoLink && (
+            <Link href={demoLink} target={'_blank'}>
+              <StyledLinkIcon />
+              demo
+            </Link>
+          )}
           <Link href={codeLink} target={'_blank'}>
             <StyledGitHubIcon />
             code
