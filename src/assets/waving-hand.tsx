@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { SVGProps, memo } from 'react'
 
 const SvgComponent = (props: SVGProps<SVGSVGElement>) => (

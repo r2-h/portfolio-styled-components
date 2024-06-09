@@ -5,9 +5,11 @@ import { Container, SectionTitle } from '@/components'
 import { Work } from '@/layout/works/work/work'
 import styled from 'styled-components'
 
+import digitalmarketplace from '../../assets/digitalMarketplace.png'
 import flashcardsImg from '../../assets/flashcards2.jpg'
 import socialImg from '../../assets/social-network-icon.jpg'
 import todoImg from '../../assets/todo.jpg'
+
 export const Works = () => {
   const { i18n, t } = useTranslation()
 
@@ -23,11 +25,22 @@ export const Works = () => {
               description={t('Developing a social network')}
               img={socialImg}
               imgTitle={'Social network image'}
-              techStack={'TypeScript, React, NextJS, RTKQuery, Storybook, Radix, React Hook Form'}
+              techStack={
+                'TypeScript, React, NextJS, RTKQuery, GraphQL, Storybook, Radix, React Hook Form'
+              }
               title={'Communication platform'}
             />
             <Work
-              codeLink={'https://github.com/r2adler/it-inc-cards'}
+              codeLink={'https://github.com/r2-h/digital_marketplace'}
+              demoLink={'https://digital-marketplace-uz9e.vercel.app/'}
+              description={t('digitalMarketplace')}
+              img={digitalmarketplace}
+              imgTitle={'Social network image'}
+              techStack={'TypeScript, NextJS, Supabase, Prisma, Tailwind'}
+              title={'Digital marketplace'}
+            />
+            <Work
+              codeLink={'https://github.com/r2-h/it-inc-cards'}
               demoLink={'https://it-inc-cards.vercel.app/'}
               description={t(
                 'An application that allows you to create and study question and answer cards. It also allows you to share your sets of cards with other users.'
@@ -38,7 +51,7 @@ export const Works = () => {
               title={'Learning platform'}
             />
             <Work
-              codeLink={'https://github.com/r2adler/toDoList'}
+              codeLink={'https://github.com/r2-h/todo-list1'}
               description={t(
                 `An application for task management. Allows you to add, edit, mark tasks, as well as sort and prioritize them.`
               )}
