@@ -35,7 +35,7 @@ export const Works = () => {
               description={t('digitalMarketplace')}
               img={eCommerce}
               imgTitle={'Social network image'}
-              techStack={'TypeScript, NextJS, Prisma, Tailwind, ServerActions'}
+              techStack={'TypeScript, NextJS, Prisma, Tailwind, ServerActions, Stripe'}
               title={'Digital marketplace'}
             />
             <Work
