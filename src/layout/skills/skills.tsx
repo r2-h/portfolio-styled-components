@@ -4,11 +4,11 @@ import { useTranslation } from 'react-i18next'
 import { CSSIcon } from '@/assets/css'
 import { HTMLIcon } from '@/assets/html'
 import { NextIcon } from '@/assets/next'
+import Prisma from '@/assets/prisma'
 import { ReactIcon } from '@/assets/react'
 import { ReactHookFormIcon } from '@/assets/react-hook-form'
 import { ReduxIcon } from '@/assets/redux'
 import { StorybookIcon } from '@/assets/storybook'
-import { StyledComponentsIcon } from '@/assets/styled-components'
 import { TailwindIcon } from '@/assets/tailwind-icon'
 import { TSIcon } from '@/assets/ts'
 import { Container, SectionTitle } from '@/components'
@@ -32,7 +32,7 @@ export const Skills = () => {
             <Skill icon={<ReduxIcon />} title={'Redux'} />
             <Skill icon={<StorybookIcon />} marginTop={'-10px'} title={'Storybook'} />
             <Skill icon={<TailwindIcon />} title={'Tailwind'} />
-            <Skill icon={<StyledComponentsIcon />} marginTop={'11px'} title={'Styled Components'} />
+            <Skill icon={<Prisma />} title={'Prisma'} />
             <Skill icon={<ReactHookFormIcon />} marginTop={'8px'} title={'React Hook Form'} />
           </Wrapper>
         </Fade>
