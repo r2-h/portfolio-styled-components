@@ -5,10 +5,9 @@ import { Container, SectionTitle } from '@/components'
 import { Work } from '@/layout/works/work/work'
 import styled from 'styled-components'
 
-import digitalmarketplace from '../../assets/digitalMarketplace.png'
+import eCommerce from '../../assets/e-commerce.png'
 import flashcardsImg from '../../assets/flashcards2.jpg'
 import socialImg from '../../assets/social-network-icon.jpg'
-import todoImg from '../../assets/todo.jpg'
 
 export const Works = () => {
   const { i18n, t } = useTranslation()
@@ -31,12 +30,12 @@ export const Works = () => {
               title={'Communication platform'}
             />
             <Work
-              codeLink={'https://github.com/r2-h/digital_marketplace'}
-              demoLink={'https://digital-marketplace-uz9e.vercel.app/'}
+              codeLink={'https://github.com/r2-h/e-commerce_shoes'}
+              demoLink={'e-commerce-shoes-eta.vercel.app'}
               description={t('digitalMarketplace')}
-              img={digitalmarketplace}
+              img={eCommerce}
               imgTitle={'Social network image'}
-              techStack={'TypeScript, NextJS, Supabase, Prisma, Tailwind'}
+              techStack={'TypeScript, NextJS, Prisma, Tailwind, ServerActions'}
               title={'Digital marketplace'}
             />
             <Work
@@ -49,16 +48,6 @@ export const Works = () => {
               imgTitle={'Flashcards image'}
               techStack={'TypeScript, React, Radix, RTK Query, Storybook,  React Hook Form'}
               title={'Learning platform'}
-            />
-            <Work
-              codeLink={'https://github.com/r2-h/todo-list1'}
-              description={t(
-                `An application for task management. Allows you to add, edit, mark tasks, as well as sort and prioritize them.`
-              )}
-              img={todoImg}
-              imgTitle={'Todolist image'}
-              techStack={'TypeScript, REACT,  RTK, Formik'}
-              title={'Task tracker'}
             />
           </Fade>
         </Wrapper>
