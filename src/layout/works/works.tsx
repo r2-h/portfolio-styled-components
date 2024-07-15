@@ -31,7 +31,7 @@ export const Works = () => {
             />
             <Work
               codeLink={'https://github.com/r2-h/e-commerce_shoes'}
-              demoLink={'e-commerce-shoes-eta.vercel.app'}
+              demoLink={'https://e-commerce-shoes-eta.vercel.app'}
               description={t('digitalMarketplace')}
               img={eCommerce}
               imgTitle={'Social network image'}
